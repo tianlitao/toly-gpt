@@ -76,7 +76,7 @@ async function fromDocuments(
   return instance;
 }
 
-const directoryPath = "markdown/solana";
+const directoryPath = "markdown/nervos";
 const loader = new RepoLoader(directoryPath);
 
 export const run = async () => {
