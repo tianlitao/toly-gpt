@@ -1,0 +1,16 @@
+[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/synchronizer/in_ibd_process.rs)
+
+The code defines a struct called `InIBDProcess` that is used to handle a specific process related to the Initial Block Download (IBD) phase of the CKB blockchain synchronization process. The `InIBDProcess` struct has three fields: a reference to a `Synchronizer` instance, a `PeerIndex` identifier, and a reference to a `CKBProtocolContext` trait object.
+
+The `InIBDProcess` struct has an associated implementation that defines two methods: `new` and `execute`. The `new` method is a constructor that takes in a `Synchronizer` instance, a `PeerIndex` identifier, and a `CKBProtocolContext` trait object, and returns a new `InIBDProcess` instance with those fields set. The `execute` method is the main logic of the `InIBDProcess` struct. It first logs a message using the `ckb_logger` crate, indicating that it is processing an IBD peer. It then checks if the `PeerIndex` identifier is present in the `state` map of the `Synchronizer` instance. If it is, it retrieves the corresponding `PeerState` instance and suspends its synchronization state using the `suspend_sync` method of the `Synchronizer` instance. The `suspend_sync` method sets the `sync_status` field of the `PeerState` instance to `Suspended`, indicating that the peer is no longer actively synchronizing with the node.
+
+The purpose of this code is to handle the specific case where a peer is in the IBD phase of synchronization. During this phase, the node needs to ensure that the peer is a valid connection and that it is not a malicious node attempting to disrupt the synchronization process. The `InIBDProcess` struct handles this by suspending synchronization with the peer if it is not a whitelisted outbound connection, or if it is an inbound connection. This ensures that the node only synchronizes with valid peers during the IBD phase.
+
+This code is likely used as part of a larger synchronization process in the CKB blockchain project. It is called when a node is processing an IBD peer, and it suspends synchronization with the peer if necessary. Other parts of the synchronization process likely handle other aspects of the synchronization, such as downloading and verifying blocks and transactions.
+## Questions: 
+ 1. What is the purpose of this code and how does it fit into the overall ckb project?
+- This code is part of the ckb project and is related to synchronizing headers with peers during the initial block download (IBD) process.
+2. What is the role of the `Synchronizer` struct and how is it used in this code?
+- The `Synchronizer` struct is used to manage the state of header synchronization with peers, and is passed as a reference to the `InIBDProcess` struct to be used in the `execute` method.
+3. What is the significance of the `peer_flags` field in the `state` struct, and how is it used in the conditional statements in the `execute` method?
+- The `peer_flags` field indicates whether the peer is outbound or inbound, and whether it is on the whitelist. This information is used to determine whether to disconnect the peer or mark it as not passing header sync authentication during the IBD process.
