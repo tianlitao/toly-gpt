@@ -21,9 +21,9 @@ export default function Home() {
   const [messageState, setMessageState] = useState<{ messages: Message[], pending?: string, history: [string, string][] }>({
     messages: [{
       "message":
-      `Hi there! I'm NervosGPT — a chatbot powered by ChatGPT. I can read an entire codebase and generate documentation.
-      I'm currently trained on the Nervos [validator codebase](https://github.com/nervosnetwork).
-      Ask me anything about how the validator works and I'll try my best try to answer.
+      `Hi there! I'm CKBGPT — a chatbot powered by ChatGPT. I can read an entire codebase and generate documentation.
+      I'm currently trained on the [The Common Knowledge Base](https://github.com/nervosnetwork/ckb).
+      Ask me anything about how the common knowledge base works and I'll try my best try to answer.
       \n**Current model:** GPT-3.5.`,
       "type": "apiMessage"
     }],
@@ -122,18 +122,18 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>TolyGPT | Nervos Chatbot</title>
-        <meta name="description" content="Nervos Validator Chatbot" />
+        <title>TolyGPT | The Common Knowledge Base Chatbot</title>
+        <meta name="description" content="The Common Knowledge Base Chatbot" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultSeo
-        title="NervosGPT | Nervos Chatbot"
+        title="CKBGPT | Nervos Chatbot"
         openGraph={{
           type: 'website',
           locale: 'en_IE',
           url: 'tolygpt.com',
-          siteName: 'NervosGPT | Nervos Chatbot',
+          siteName: 'CKBGPT | The Common Knowledge Base Chatbot',
           description: 'AI-powered documentation chatbot for the Nervos',
           images: [
             {
