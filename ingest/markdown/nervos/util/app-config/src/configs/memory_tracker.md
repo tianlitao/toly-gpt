@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/memory_tracker.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/memory_tracker.rs)
 
 This code defines a struct called `Config` that represents the configuration options for a memory tracker. The `Config` struct has a single field called `interval` which is of type `u64` and represents the tracking interval in seconds.
 
@@ -25,7 +25,7 @@ fn main() {
     start_memory_tracker(config);
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code defines a struct called `Config` that contains a single field `interval` and is used for memory tracking.
 

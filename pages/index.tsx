@@ -22,7 +22,7 @@ export default function Home() {
     messages: [{
       "message":
       `Hi there! I'm CKBGPT — a chatbot powered by ChatGPT. I can read an entire codebase and generate documentation.
-      I'm currently trained on the [The Common Knowledge Base](https://github.com/nervosnetwork/ckb).
+      I'm currently trained on the [The Common Knowledge Base](https://github.com/nervosnetwork/ckb/blob/develop).
       Ask me anything about how the common knowledge base works and I'll try my best try to answer.
       \n**Current model:** GPT-3.5.`,
       "type": "apiMessage"
@@ -217,8 +217,8 @@ export default function Home() {
           <div className={styles.footer}>
             <div className="center">
               <br />
-              <p>Want this for your codebase?  <a href="https://tally.so/r/nr502L" target="_blank" rel="noreferrer"> Apply here</a></p>
-              <p>Follow <a href="https://twitter.com/0xSamHogan" target="_blank" rel="noreferrer">Sam Hogan</a> for updates.</p>
+              {/* <p>Want this for your codebase?  <a href="https://tally.so/r/nr502L" target="_blank" rel="noreferrer"> Apply here</a></p> */}
+              {/* <p>Follow <a href="https://twitter.com/0xSamHogan" target="_blank" rel="noreferrer">Sam Hogan</a> for updates.</p> */}
             </div>
           </div>
         </div>

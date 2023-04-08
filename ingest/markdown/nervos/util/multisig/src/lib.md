@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/multisig/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/multisig/src/lib.rs)
 
 The code above is a module for multi-signatures in the ckb project. Multi-signatures are a mechanism that requires multiple valid signatures from different keys to authorize a transaction or action. This module specifically implements an m-of-n signature mechanism, which requires m valid signatures from m different keys out of a pre-configured set of n keys.
 
@@ -29,10 +29,10 @@ let signature2 = multi_sig.sign(&message, &keys[1]).unwrap();
 
 // Verify the signatures
 assert!(multi_sig.verify(&message, &[signature1, signature2]).is_ok());
-``` 
+```
 
 In this example, a set of three private keys is defined and used to create a multi-signature object with a required signature count of 2. Two of the keys are then used to sign a message, and the resulting signatures are verified using the multi-signature object. If both signatures are valid, the `verify` function will return `Ok(())`.
-## Questions: 
+## Questions:
  1. What is the purpose of the `error` and `secp256k1` modules?
    - The `error` module likely contains custom error types for the multi-signature mechanism, while the `secp256k1` module likely provides cryptographic functions for signing and verifying signatures using the secp256k1 elliptic curve algorithm.
 2. How is the pre-configuration of n keys handled in this mechanism?

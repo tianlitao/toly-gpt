@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/core/fee_rate.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/core/fee_rate.rs)
 
 The code defines a struct called `FeeRate` that represents a fee rate in shannons per kilo-weight. It has a single field of type `u64` that stores the actual fee rate. The code also defines a constant `KW` with a value of 1000, which is used to convert weight to kilo-weight.
 
@@ -21,7 +21,7 @@ let weight = 1000;
 let fee = fee_rate.fee(weight);
 println!("Fee: {}", fee);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `FeeRate` struct and its associated methods?
 - The `FeeRate` struct represents a fee rate in shannons per kilo-weight and provides methods for calculating fees and converting to and from u64 values.
 

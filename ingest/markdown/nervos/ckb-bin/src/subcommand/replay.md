@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/replay.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/replay.rs)
 
 The `replay` function in this code replays a chain from a given block range and performs either a sanity check or a profiling operation. The function takes two arguments: `args` and `async_handle`. `args` is an instance of the `ReplayArgs` struct that contains the configuration options for the replay operation, while `async_handle` is a handle to the asynchronous runtime.
 
@@ -9,7 +9,7 @@ The `profile` function takes a `Shared` instance, a `ChainService` instance, a `
 The `process_range_block` function takes a `Shared` instance, a `ChainService` instance, and a block range iterator. It processes the blocks in the range by getting the block hash and block from the `Shared` instance, counting the number of transactions, and processing the block using the `ChainService` instance. It returns the number of transactions.
 
 The `sanity_check` function takes a `Shared` instance, a `ChainService` instance, and a `full_verification` option. It first gets the tip header from the `Shared` instance and creates a `ChainIterator` instance using the `store` method of the `Shared` instance. It then creates a progress bar using the `ProgressBar` and `ProgressStyle` structs from the `ckb_instrument` crate. The function then iterates over the blocks in the chain using the `ChainIterator` instance, processes each block using the `ChainService` instance, and updates the progress bar. If the `full_verification` option is specified, the `ChainService` instance is called with the `Switch::NONE` option. Otherwise, the `ChainService` instance is called with the `Switch::DISABLE_ALL - Switch::DISABLE_NON_CONTEXTUAL` option. If an error occurs during block processing, an error message is printed, and the function returns. If all blocks are processed successfully, the function checks if the cursor is equal to the tip header. If they are equal, a message is printed indicating that the sanity check passed. Otherwise, an error message is printed indicating that the sanity check failed.
-## Questions: 
+## Questions:
  1. What is the purpose of the `replay` function?
 - The `replay` function takes in `ReplayArgs` and `Handle` as arguments and replays the chain with the specified configuration. It returns a `Result` with an `ExitCode` indicating success or failure.
 

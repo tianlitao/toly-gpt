@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/notify.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/notify.rs)
 
 The code defines a Rust struct called `Config` that represents a set of configuration options for notifying events in a blockchain system. The struct has several fields, each of which is an optional string or integer value. The fields are:
 
@@ -33,7 +33,7 @@ let toml_string = toml::to_string(&config).unwrap();
 // Deserialize the TOML string back into a Config struct
 let deserialized_config = toml::from_str::<Config>(&toml_string).unwrap();
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code defines a struct called `Config` that contains options for notifying scripts when certain events occur in a blockchain.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/rpc/src/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/rpc/src/error.rs)
 
 The code defines an enum called `RPCError` that represents all possible errors that can occur in the CKB (Nervos Network) RPC (Remote Procedure Call) system. The enum contains variants that represent different error codes and messages. The purpose of this code is to provide a standardized way of handling errors in the CKB RPC system.
 
@@ -7,7 +7,7 @@ The `RPCError` enum contains variants that represent different error codes and m
 The code also contains several methods that can be used to create RPC errors. For example, the `invalid_params` method creates an error with the `InvalidParams` error code and a custom message. The `custom` method creates an error with a custom error code and message. The `custom_with_data` method creates an error with a custom error code, message, and data. The `custom_with_error` method creates an error from a standard error with a custom error code.
 
 Overall, this code provides a standardized way of handling errors in the CKB RPC system. It allows developers to easily create and handle errors in a consistent way, which can help to improve the reliability and stability of the system.
-## Questions: 
+## Questions:
  1. What is the purpose of the `RPCError` enum?
 - The `RPCError` enum defines CKB RPC error codes, including pre-defined errors and CKB application-defined errors.
 

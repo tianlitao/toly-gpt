@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/miner.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/miner.rs)
 
 The code defines configuration options for a miner in the ckb project. The `Config` struct contains two fields: `client` and `workers`. The `client` field is of type `ClientConfig` and contains options for connecting to a CKB node via RPC. The `workers` field is a vector of `WorkerConfig` structs, which define options for the miner's workers.
 
@@ -7,7 +7,7 @@ The `ClientConfig` struct contains the following fields: `rpc_url`, which specif
 The `WorkerConfig` enum contains two variants: `Dummy` and `EaglesongSimple`. The `Dummy` variant contains options for a dummy worker that submits an arbitrary answer. The `DummyConfig` enum contains four variants: `Constant`, `Uniform`, `Normal`, and `Poisson`, which specify different ways to control the pace at which the worker submits new blocks. The `EaglesongSimple` variant contains options for a worker that solves Eaglesong PoW. The `EaglesongSimpleConfig` struct contains two fields: `threads`, which specifies the number of worker threads, and `extra_hash_function`, which is an optional field that specifies whether to perform an extra round of hash function on the Eaglesong output using Blake2b hash with CKB preferences.
 
 This code is used to configure a miner in the ckb project. The `Config` struct can be used to set options for connecting to a CKB node via RPC and for configuring the miner's workers. The `ClientConfig` struct contains options for connecting to the CKB node, while the `WorkerConfig` enum contains options for the miner's workers. The `Dummy` variant of the `WorkerConfig` enum can be used to configure a dummy worker that submits an arbitrary answer, while the `EaglesongSimple` variant can be used to configure a worker that solves Eaglesong PoW. The `EaglesongSimpleConfig` struct contains options for the Eaglesong worker, including the number of worker threads and whether to perform an extra round of hash function on the Eaglesong output.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code defines the configuration options for the miner component of the ckb project, which connects to the CKB node via RPC and performs proof-of-work mining.
 

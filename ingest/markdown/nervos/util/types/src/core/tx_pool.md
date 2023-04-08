@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/core/tx_pool.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/core/tx_pool.rs)
 
 The code defines various types and functions related to the transaction pool in the ckb project. The transaction pool is a data structure that stores valid transactions that have not yet been included in a block. The purpose of the transaction pool is to allow nodes to quickly propagate transactions to other nodes in the network and to allow miners to select transactions to include in the next block they mine.
 
@@ -9,7 +9,7 @@ The `TxStatus` enum defines the status of a transaction in the transaction pool.
 The `TransactionWithStatus` struct represents a transaction with its status in the transaction pool. The `get_transaction_weight` function calculates the weight of a transaction based on its serialized size and consumed cycles. The `TxPoolInfo` struct contains information about the transaction pool, such as the associated chain tip block hash, the number of transactions in the pending and proposed states, the total consumed VM cycles of all transactions in the pool, and others.
 
 Overall, this code provides the necessary types and functions to manage the transaction pool in the ckb project. It allows nodes to quickly propagate transactions and miners to select transactions to include in the next block they mine.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Reject` enum and its associated methods?
 - The `Reject` enum represents reasons for rejecting a transaction from the transaction pool, and its associated methods provide functionality for determining if a rejection reason is due to a malformed transaction and if a transaction can be resubmitted for relay.
 

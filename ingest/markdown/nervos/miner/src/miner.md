@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/miner/src/miner.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/miner/src/miner.rs)
 
 The `Miner` struct is a component of the ckb project that is responsible for mining new blocks on the blockchain. It uses a proof-of-work (PoW) algorithm to find a nonce that, when combined with the block header, produces a hash that meets a certain difficulty target. The `Miner` struct receives new work from the `work_rx` channel and distributes it to a set of worker threads. Each worker thread runs the PoW algorithm on the work and sends the resulting nonce back to the `Miner` struct via the `nonce_rx` channel. The `Miner` struct then combines the nonce with the work to create a new block and submits it to the blockchain via the `client` object.
 
@@ -9,7 +9,7 @@ The `Miner` struct uses an LRU cache to keep track of tasks that have already be
 The `Miner` struct also uses a progress bar to display the number of nonces found and the total number of nonces to find. This is useful for monitoring the progress of the mining process.
 
 Overall, the `Miner` struct is a critical component of the ckb project that is responsible for creating new blocks on the blockchain. It uses a set of worker threads to perform the PoW algorithm and submits new blocks to the blockchain via the `client` object. The `Miner` struct also handles the creation of uncle blocks and uses a progress bar to display the progress of the mining process.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code defines a `Miner` struct and its implementation, which is responsible for mining new blocks using proof-of-work algorithm.
 

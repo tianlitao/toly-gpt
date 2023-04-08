@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/tx-pool/src/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/tx-pool/src/error.rs)
 
-This file defines the error types and error handling functions for the Tx-pool and block assembly related operations in the ckb project. 
+This file defines the error types and error handling functions for the Tx-pool and block assembly related operations in the ckb project.
 
 The `Tx-pool` is a pool of unconfirmed transactions in the ckb blockchain. This file defines the error type for the Tx-pool operations. It also exports the `Reject` type from the `ckb_types::core::tx_pool` module. The `Reject` type is used to represent the reason why a transaction was rejected by the Tx-pool.
 
@@ -8,7 +8,7 @@ The `BlockAssembler` is a module in the ckb project that is responsible for asse
 
 The error handling functions defined in this file are used to handle different types of errors that can occur during the execution of the Tx-pool and block assembly related operations. The `handle_try_send_error` function is used to handle the `TrySendError` type that can occur when sending a message through a channel. The `handle_recv_error` function is used to handle the `RecvError` type that can occur when receiving a message through a channel. The `handle_send_cmd_error` function is used to handle the `SendError` type that can occur when sending a command.
 
-Overall, this file provides the necessary error types and error handling functions for the Tx-pool and block assembly related operations in the ckb project. These error types and functions can be used by other modules in the project to handle errors that occur during the execution of these operations. 
+Overall, this file provides the necessary error types and error handling functions for the Tx-pool and block assembly related operations in the ckb project. These error types and functions can be used by other modules in the project to handle errors that occur during the execution of these operations.
 
 Example usage:
 
@@ -49,7 +49,7 @@ match tx_pool.get_tx(&tx_hash) {
     None => println!("Transaction not found in the Tx-pool"),
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this file in the ckb project?
 - This file defines the error types for Tx-pool and block assemble related operations in the ckb project.
 

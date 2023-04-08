@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/pow/src/eaglesong.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/pow/src/eaglesong.rs)
 
 The code defines a struct called `EaglesongPowEngine` that implements the `PowEngine` trait. The `PowEngine` trait is used to verify the proof-of-work (PoW) of a block header in the CKB blockchain. The `verify` method of the `PowEngine` trait takes a block header as input and returns a boolean indicating whether the PoW is valid or not.
 
@@ -9,7 +9,7 @@ The `verify` method then checks whether the calculated block target is valid or 
 Finally, the `verify` method compares the calculated PoW hash with the block target. If the calculated PoW hash is greater than the block target, the method returns `false`. Otherwise, it returns `true`.
 
 This code is used in the CKB blockchain to verify the PoW of a block header. Other PoW engines can be implemented by creating a struct that implements the `PowEngine` trait and defining the `verify` method. For example, the `CuckooPowEngine` struct implements the `PowEngine` trait using the Cuckoo Cycle PoW algorithm.
-## Questions: 
+## Questions:
  1. What is the purpose of the `EaglesongPowEngine` struct?
 - The `EaglesongPowEngine` struct is a PowEngine implementation that verifies the proof-of-work of a given header.
 

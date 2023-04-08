@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/devtools/release/bump.sh)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/devtools/release/bump.sh)
 
 This script is a bash script that is used to update the version of the ckb project. It takes a single argument which is the new version number. The script first checks if the correct number of arguments have been passed to it. If not, it prints an error message and exits with an error code of 1.
 
@@ -15,15 +15,15 @@ This script is useful for developers who are working on the ckb project and need
 ```
 
 This will update the version number of the ckb project to `1.2.3`.
-## Questions: 
+## Questions:
  1. What is the purpose of this script?
-   
+
    This script is used to update the version of a Rust project by modifying the `Cargo.toml` files and updating the version badge in the `README.md` file.
 
 2. What arguments does the `main` function expect?
-   
+
    The `main` function expects a single argument, which is the version number to update the project to.
 
 3. What does the `sed` command do in this script?
-   
+
    The `sed` command is used to modify the `Cargo.toml` files by replacing the existing version number with the new version number passed as an argument to the script. It is also used to update the version badge in the `README.md` file.

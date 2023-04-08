@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/relayer/get_transactions_process.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/relayer/get_transactions_process.rs)
 
 The `GetTransactionsProcess` struct is a part of the ckb project and is used to handle incoming requests for transaction data from peers. It contains a `message` field that holds the incoming request, a `relayer` field that provides access to the transaction pool, an `nc` field that provides access to the network context, and a `peer` field that identifies the requesting peer.
 
@@ -7,7 +7,7 @@ The `execute` method of the `GetTransactionsProcess` struct is called to handle 
 The `send_relay_transactions` method constructs a `RelayMessage` containing the requested transactions and sends it to the requesting peer using the `send_message_to` function.
 
 Overall, the `GetTransactionsProcess` struct provides a way for peers to request transaction data from the transaction pool and receive it in batches. This is an important part of the ckb project as it allows peers to synchronize their transaction pools and stay up-to-date with the latest transactions.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code is a module for processing "get transactions" requests from peers in the CKB network. It fetches transactions from the transaction pool and sends them back to the requesting peer.
 

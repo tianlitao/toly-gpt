@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/peer_registry.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/peer_registry.rs)
 
 The `PeerRegistry` module is responsible for managing the network connections of the CKB node. It keeps track of all the connected peers and their session information. The module also enforces connection limits and whitelisting rules.
 
@@ -23,7 +23,7 @@ The `get_key_by_peer_id` function is used to retrieve the session ID of a peer g
 The `peers` and `connected_peers` functions are used to retrieve information about all connected peers.
 
 The `connection_status` function returns a `ConnectionStatus` struct containing information about the total number of sessions, the number of non-whitelisted inbound and outbound sessions, and the maximum inbound and outbound limits.
-## Questions: 
+## Questions:
  1. What is the purpose of the `PeerRegistry` struct and how is it used in the project?
 - The `PeerRegistry` struct is used to keep track of opened session information and connection status for the ckb project's peer-to-peer network. It is used to accept new peers, remove disconnected peers, and get information about connected peers.
 

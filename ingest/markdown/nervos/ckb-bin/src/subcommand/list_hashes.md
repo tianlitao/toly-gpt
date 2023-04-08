@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/list_hashes.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/list_hashes.rs)
 
 The code defines a Rust module that is part of the ckb project. The module contains a function called `list_hashes` that lists the hashes of various system cells and dep groups in a ChainSpec. The ChainSpec is a configuration file that defines the rules of the blockchain, such as the consensus rules, the block reward, and the transaction fees. The ChainSpec is loaded from a file specified by the user or from a bundled file.
 
@@ -9,7 +9,7 @@ The `list_hashes` function uses the `TryFrom` trait to convert a `ChainSpec` obj
 The `list_hashes` function uses the `LinkedHashMap` struct to store the hashes of the system cells and dep groups for each ChainSpec. The function then prints the hashes in either JSON or TOML format, depending on the user's choice.
 
 Overall, this code is used to list the hashes of the system cells and dep groups in a ChainSpec. This information is useful for debugging and testing the ChainSpec.
-## Questions: 
+## Questions:
  1. What is the purpose of the `SpecHashes` struct?
 - The `SpecHashes` struct is used to store various hashes related to a chain specification, including the hash of the specification itself, the genesis block hash, and the hashes of system cells and dependency groups.
 

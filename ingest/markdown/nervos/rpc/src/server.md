@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/rpc/src/server.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/rpc/src/server.rs)
 
-The `RpcServer` module provides an implementation of an RPC server that can be used to handle remote procedure calls. The module defines a `RpcServer` struct that contains an HTTP server, a TCP server, and a WebSocket server. The `new` method of the `RpcServer` struct creates a new instance of the `RpcServer` struct and starts the HTTP server. The method takes four parameters: `config`, `io_handler`, `notify_controller`, and `handle`. 
+The `RpcServer` module provides an implementation of an RPC server that can be used to handle remote procedure calls. The module defines a `RpcServer` struct that contains an HTTP server, a TCP server, and a WebSocket server. The `new` method of the `RpcServer` struct creates a new instance of the `RpcServer` struct and starts the HTTP server. The method takes four parameters: `config`, `io_handler`, `notify_controller`, and `handle`.
 
 The `config` parameter is an instance of the `RpcConfig` struct that contains configuration options for the RPC server. The `io_handler` parameter is an instance of the `IoHandler` struct that defines the methods that can be called remotely. The `notify_controller` parameter is an instance of the `NotifyController` struct that is used to emit notifications. The `handle` parameter is an instance of the `Handle` struct that is used to spawn tasks.
 
@@ -25,15 +25,15 @@ let handle = Handle::current();
 let rpc_server = RpcServer::new(config, io_handler, &notify_controller, handle);
 println!("HTTP server address: {}", rpc_server.http_address());
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-   
+
    This code defines an RPC server for the ckb project, which handles incoming requests and sends responses back to clients.
 
 2. What dependencies are required for this code to work?
-   
+
    This code depends on several crates, including `ckb_app_config`, `ckb_logger`, `ckb_notify`, `jsonrpc_pubsub`, `jsonrpc_server_utils`, and `tokio`.
 
 3. What methods are available for interacting with the RPC server?
-   
+
    The `new` method creates a new RPC server instance, while the `http_address` method returns the HTTP RPC endpoint.

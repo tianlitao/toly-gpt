@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/traits/src/header_provider.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/traits/src/header_provider.rs)
 
 The code defines a trait called `HeaderProvider` that provides methods for retrieving header information for a given block hash. The trait has three methods: `get_header`, `timestamp_and_parent`, and `block_median_time`.
 
@@ -10,7 +10,7 @@ The `block_median_time` method takes a block hash and a median block count and r
 
 The trait is implemented for a boxed closure that takes a block hash and returns the corresponding header view. This allows for flexibility in how the header information is retrieved, as different implementations can be used depending on the context.
 
-Overall, this code provides a way to retrieve header information for a given block hash, including timestamps and parent hashes, and to calculate the median timestamp of a set of blocks. This information can be used in various ways throughout the larger project, such as for validating blocks or calculating mining difficulty. 
+Overall, this code provides a way to retrieve header information for a given block hash, including timestamps and parent hashes, and to calculate the median timestamp of a set of blocks. This information can be used in various ways throughout the larger project, such as for validating blocks or calculating mining difficulty.
 
 Example usage:
 
@@ -33,7 +33,7 @@ let provider = MyHeaderProvider;
 let block_hash = Byte32::zero();
 let median_time = provider.block_median_time(&block_hash, 10);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `HeaderProvider` trait?
    - The `HeaderProvider` trait is used for header storage and provides methods to get the header of a given block hash, timestamp and block number of a block hash, and past block median time.
 2. What does the `timestamp_and_parent` method return if the parent header does not exist?

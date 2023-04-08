@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/error/src/prelude.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/error/src/prelude.rs)
 
 This code is a module that includes several traits. Traits are a way to define a set of methods that can be implemented by multiple types. This module re-exports some traits from other crates, meaning that it makes them available to be used in the larger project without having to import them directly from their original crates.
 
@@ -23,7 +23,7 @@ fn do_something() -> Result<(), MyError> {
 In this example, `MyError` is a custom error type that implements the `Error` trait using the `#[derive(Error)]` attribute. This allows for the creation of error variants with custom error messages using the `#[error("...")]` attribute. The `do_something` function returns a `Result` with the error type set to `MyError`.
 
 Overall, this module provides a way to easily use and implement traits in the larger project, and specifically makes the `Error` trait from the `thiserror` crate available for use.
-## Questions: 
+## Questions:
  1. What is the purpose of this module and what traits does it include?
    - The purpose of this module is to include several traits. The specific traits included are not mentioned in the code snippet provided.
 2. Are all the traits included in this module defined within this crate or are some re-exported from other crates?

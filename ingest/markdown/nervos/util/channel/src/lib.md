@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/channel/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/channel/src/lib.rs)
 
 This code serves as a re-export module for the `crossbeam_channel` crate, which is used for inter-thread communication in Rust. The purpose of this module is to provide a uniform version of the `crossbeam_channel` dependency for the larger project, which may have multiple modules that depend on different versions of the crate. By re-exporting the necessary types and functions from `crossbeam_channel`, this module ensures that all other modules in the project use the same version of the crate.
 
@@ -25,7 +25,7 @@ fn main() {
 ```
 
 In this example, we create a bounded channel with a capacity of 1 using the `bounded` function from the `ckb` module. We then spawn a new thread that sends a message over the channel, and finally receive the message on the main thread and print it to the console. By using the `ckb` module to create the channel, we ensure that we are using the same version of the `crossbeam_channel` crate as the rest of the project.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb` project and how does this code fit into it?
    - This code is a re-export of the `crossbeam_channel` crate to provide a uniform dependency version. The purpose of the `ckb` project is not clear from this code alone.
 2. What is the difference between `bounded` and `unbounded` channels?

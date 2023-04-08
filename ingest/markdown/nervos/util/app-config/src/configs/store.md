@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/store.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/store.rs)
 
 This code defines a struct called `Config` that stores various configuration options for the ckb project. The struct has several fields, each representing a different configuration option. These options include the maximum number of cached block headers, cell data, block proposals, transaction hashes, uncles, and extensions. Additionally, there is a boolean field called `freezer_enable` that determines whether or not the freezer feature is enabled.
 
@@ -28,7 +28,7 @@ fn main() {
 ```
 
 In this example, a `Config` object is created with some example configuration options. These options could then be used to configure other parts of the ckb project.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and where is it used in the ckb project?
 - This code defines a struct called `Config` that stores various cache sizes and a boolean flag for enabling freezer. It is likely used in the caching mechanism of the ckb project.
 

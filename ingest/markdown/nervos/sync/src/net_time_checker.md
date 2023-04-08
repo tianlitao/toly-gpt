@@ -1,12 +1,12 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/net_time_checker.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/net_time_checker.rs)
 
-The code defines two structs, `NetTimeChecker` and `NetTimeProtocol`, which are used to collect and check time offset samples from network peers. 
+The code defines two structs, `NetTimeChecker` and `NetTimeProtocol`, which are used to collect and check time offset samples from network peers.
 
 `NetTimeChecker` is responsible for collecting and checking time offset samples. It has a `samples` field which is a `VecDeque` that stores the time offset samples. The `add_sample` method is used to add a new sample to the deque, and if the deque exceeds the `max_samples` limit, the oldest sample is removed. The `median_offset` method calculates the median of the samples and returns it if the number of samples is greater than or equal to `min_samples`. If the median offset is greater than the `tolerant_offset`, the `check` method returns an error.
 
 `NetTimeProtocol` is responsible for sending and receiving time messages to and from network peers. It has a `checker` field which is a `RwLock` that stores an instance of `NetTimeChecker`. The `connected` method sends the local time to inbound peers, and the `received` method receives time messages from peers, calculates the time offset, and adds it to the `NetTimeChecker` instance. If the offset is greater than the `tolerant_offset`, a warning message is logged.
 
-The purpose of this code is to ensure that the local clock of a node is synchronized with the network time. It is used in the larger project to prevent unexpected errors that may occur due to time discrepancies between nodes. 
+The purpose of this code is to ensure that the local clock of a node is synchronized with the network time. It is used in the larger project to prevent unexpected errors that may occur due to time discrepancies between nodes.
 
 Example usage:
 
@@ -21,7 +21,7 @@ match result {
     Err(offset) => println!("Time offset is too large: {}ms", offset),
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `NetTimeChecker` struct?
 - The `NetTimeChecker` struct is used to collect and check time offset samples.
 2. What is the significance of the `tolerant_offset` field in the `NetTimeChecker` struct?

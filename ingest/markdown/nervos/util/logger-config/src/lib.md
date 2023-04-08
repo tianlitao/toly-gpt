@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/logger-config/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/logger-config/src/lib.rs)
 
 The code defines a Rust crate that is used to configure the CKB logger and logging service. The crate provides a `Config` struct that is used to build the `Logger` and any number of extra loggers. The `Config` struct includes configurations of the main logger and any number of extra loggers. The crate also provides an `ExtraLoggerConfig` struct that is used to build an extra CKB logger.
 
@@ -18,15 +18,15 @@ The `ExtraLoggerConfig` struct includes the following field:
 The crate also provides some default values for the `Config` struct.
 
 This crate can be used in the larger CKB project to configure the logger and logging service. Developers can use the `Config` struct to customize the logger and logging service according to their needs. For example, they can set the log file path, log directory path, and whether to output log records into a file or stdout. They can also add extra loggers by using the `extra` field of the `Config` struct. The `ExtraLoggerConfig` struct can be used to customize the extra logger.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what does it configure?
-    
+
     This code is used to configure the CKB logger and logging service. It includes configurations for the main logger and any number of extra loggers.
 
 2. What is the format of the configuration file and what options are available?
-    
+
     The configuration file is a struct called `Config` which includes options such as `filter`, `color`, `file`, `log_dir`, `log_to_file`, `log_to_stdout`, and `emit_sentry_breadcrumbs`. It also includes a `HashMap` of extra loggers with their own configurations.
 
 3. How can this code be tested?
-    
+
     There is a module called `tests` which can be used to test this code. It is located in the same file as the `Config` and `ExtraLoggerConfig` structs.

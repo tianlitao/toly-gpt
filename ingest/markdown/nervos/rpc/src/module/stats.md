@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/rpc/src/module/stats.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/rpc/src/module/stats.rs)
 
-The code defines an RPC module called `StatsRpc` that provides two methods for getting statistics about the CKB blockchain. The `get_blockchain_info` method returns information about the current state of the blockchain, including the chain ID, difficulty, epoch, and median time. It also returns any active alerts that have been issued by the network. The `get_deployments_info` method returns information about the current state of any protocol upgrades that have been deployed to the network. 
+The code defines an RPC module called `StatsRpc` that provides two methods for getting statistics about the CKB blockchain. The `get_blockchain_info` method returns information about the current state of the blockchain, including the chain ID, difficulty, epoch, and median time. It also returns any active alerts that have been issued by the network. The `get_deployments_info` method returns information about the current state of any protocol upgrades that have been deployed to the network.
 
 The `StatsRpc` module is implemented by the `StatsRpcImpl` struct, which contains a reference to the shared state of the CKB node and an alert notifier. The `get_blockchain_info` method retrieves the current tip header and median time from the shared state, as well as the current consensus rules. It then constructs a `ChainInfo` struct containing this information, as well as any active alerts that have been issued by the network. The `get_deployments_info` method retrieves the current tip header and snapshot from the shared state, as well as the current consensus rules. It then constructs a `DeploymentsInfo` struct containing information about any protocol upgrades that have been deployed to the network, including their activation status and deployment state.
 
@@ -16,7 +16,7 @@ let client = StatsRpcClient::new(transport);
 let chain_info: ChainInfo = client.get_blockchain_info().unwrap();
 println!("{:?}", chain_info);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code defines an RPC module for getting various statistic data about the ckb blockchain, including chain information and deployment information.
 

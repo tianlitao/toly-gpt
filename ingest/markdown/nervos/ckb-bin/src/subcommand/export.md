@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/export.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/export.rs)
 
 The `export` function in this code is responsible for exporting data from the ckb blockchain. It takes in two arguments: `args` of type `ExportArgs` and `async_handle` of type `Handle`. The `ExportArgs` struct contains configuration information for the export process, such as the binary name, root directory, and database. The `Handle` is used for asynchronous processing.
 
@@ -28,7 +28,7 @@ match result {
     Err(code) => println!("Export failed with exit code: {:?}", code),
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code exports data from a CKB node using the `Export` module and a `SharedBuilder` instance.
 

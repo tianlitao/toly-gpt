@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/stats.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/stats.rs)
 
 The `stats` function in this code is used to generate statistics about the blockchain. It takes in a `StatsArgs` struct and an `async_handle` as arguments and returns a `Result` with an `ExitCode`. The `StatsArgs` struct contains configuration information for the statistics generation, such as the root directory of the blockchain data and the consensus rules to use. The `async_handle` is used for asynchronous operations.
 
@@ -13,7 +13,7 @@ The `print_uncle_rate` method of the `Statics` struct generates statistics about
 The `print_miner_statics` method of the `Statics` struct generates statistics about the miners of the blockchain. It counts the number of blocks mined by each miner and prints the results. It uses a `HashMap` to store the counts for each miner and sorts the results by count. It prints the results as a percentage of the total number of blocks mined, along with the miner's script arguments, code hash, and hash type.
 
 Overall, this code is used to generate statistics about the blockchain, such as the uncle rate and the miners of the blockchain. These statistics can be used to analyze the performance and behavior of the blockchain.
-## Questions: 
+## Questions:
  1. What is the purpose of the `stats` function?
 - The `stats` function takes in `StatsArgs` and `Handle` as arguments, builds `Statics` using `Statics::build`, prints uncle rate using `print_uncle_rate`, prints miner statistics using `print_miner_statics`, and returns `Ok(())`.
 

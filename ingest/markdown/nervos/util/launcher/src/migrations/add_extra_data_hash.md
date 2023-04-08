@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/launcher/src/migrations/add_extra_data_hash.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/launcher/src/migrations/add_extra_data_hash.rs)
 
 The code is a migration script that adds a new column to a RocksDB database used in the ckb project. Specifically, it adds a new column called `COLUMN_CELL_DATA_HASH` to the database and populates it with data from the existing `COLUMN_CELL_DATA` column. The purpose of this migration is to improve the performance of certain queries that require access to the data hash of a cell.
 
@@ -7,7 +7,7 @@ The `AddExtraDataHash` struct defines the migration and implements the `Migratio
 The `version` function returns a string representing the version of the migration. In this case, the version is hardcoded as `20210609195049`.
 
 This migration can be used as part of a larger project to update the schema of a RocksDB database used by the project. For example, if a new feature is added to the project that requires access to the data hash of a cell, this migration can be run to add the new column and populate it with the necessary data. Once the migration is complete, the project can use the new column to improve the performance of the feature.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code is a migration script that adds a new column to a RocksDB database for storing the hash of cell data.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/protocols/identify/protocol.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/protocols/identify/protocol.rs)
 
 The code defines a struct called `IdentifyMessage` that represents a message used in peer-to-peer communication. The message contains information about the peer's identity, including the addresses it is listening on and the address it was observed from. The message is encoded and decoded using the `ckb_types` library.
 
@@ -25,7 +25,7 @@ let encoded = message.encode();
 let decoded = IdentifyMessage::decode(&encoded).unwrap();
 assert_eq!(decoded, message);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `IdentifyMessage` struct and its associated methods?
 - The `IdentifyMessage` struct represents a message used for peer identification in a peer-to-peer network. Its associated methods allow for encoding and decoding of the message.
 

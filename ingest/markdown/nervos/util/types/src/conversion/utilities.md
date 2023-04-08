@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/conversion/utilities.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/conversion/utilities.rs)
 
 This code defines a set of macros for implementing conversion functions between Rust types and their corresponding packed representations. These macros are used to generate code that can be used throughout the larger project to pack and unpack data structures for storage or transmission.
 
@@ -17,7 +17,7 @@ The `impl_conversion_for_packed_optional_pack` macro generates an implementation
 The `impl_conversion_for_packed_iterator_pack` macro generates an implementation of the `PackVec` trait for a generic type that can be converted into an iterator of packed item values. This implementation builds a new packed vector by extending the iterator with the `extend` method.
 
 Overall, these macros provide a convenient way to generate conversion functions for a wide variety of Rust types and their packed representations. By using these macros throughout the larger project, developers can ensure that data is consistently packed and unpacked in a way that is compatible with the project's storage and transmission requirements.
-## Questions: 
+## Questions:
  1. What is the purpose of the `macro_rules!` in this code?
    - The `macro_rules!` is used to define macros that generate code based on the input provided to them. In this code, the macros are used to generate implementations of conversion traits for different types.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/tx-pool/src/block_assembler/candidate_uncles.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/tx-pool/src/block_assembler/candidate_uncles.rs)
 
 The `CandidateUncles` struct is a container for storing uncle blocks that are candidates for inclusion in the blockchain. Uncle blocks are blocks that are not included in the main chain but are still valid and can be included in the blockchain as a reward for miners. The purpose of this container is to keep track of uncle blocks that have been received but not yet included in the blockchain.
 
@@ -7,7 +7,7 @@ The container is implemented as a `BTreeMap` where the keys are block numbers an
 The container provides methods for getting the length of the container (`len`), checking if the container is empty (`is_empty`), getting an iterator over the values of the container (`values`), and removing uncle blocks from the container by their number (`remove_by_number`). The container also provides a method for preparing uncle blocks for inclusion in the blockchain (`prepare_uncles`). This method takes a snapshot of the current state of the blockchain and the current epoch and returns a vector of uncle blocks that are candidates for inclusion in the blockchain. The method checks if the uncle block is in the same epoch as the current epoch, has the same difficulty as the current epoch, and has a block number less than the candidate number (the tip number of the snapshot plus one). If the uncle block meets these conditions and is not already in the main chain or in the list of uncles, it is added to the vector of uncle blocks.
 
 Overall, the `CandidateUncles` container is an important component of the blockchain that helps to keep track of uncle blocks that are candidates for inclusion in the blockchain. It provides methods for inserting, removing, and preparing uncle blocks for inclusion in the blockchain.
-## Questions: 
+## Questions:
  1. What is the purpose of the `CandidateUncles` struct and its methods?
 - The `CandidateUncles` struct is a container for storing uncle blocks that are candidates for inclusion in the blockchain. Its methods allow for inserting, removing, and retrieving uncle blocks from the container, as well as preparing a list of uncle blocks to be included in the blockchain based on certain criteria.
 

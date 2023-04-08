@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/jsonrpc-types/src/debug.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/jsonrpc-types/src/debug.rs)
 
 The code defines two structs, `ExtraLoggerConfig` and `MainLoggerConfig`, which are used to configure the runtime logger for the ckb project. The `ExtraLoggerConfig` struct allows for setting log levels for different modules, while the `MainLoggerConfig` struct provides additional options for configuring the logger.
 
@@ -7,7 +7,7 @@ The `ExtraLoggerConfig` struct has a single field, `filter`, which is a string t
 The `MainLoggerConfig` struct has four fields: `filter`, `to_stdout`, `to_file`, and `color`. The `filter` field is similar to the one in `ExtraLoggerConfig`, but it is optional and can be set to `null` to keep the current option unchanged. The `to_stdout` field is a boolean that determines whether the logs should be printed to the process stdout. It is also optional and can be set to `null` to keep the current option unchanged. The `to_file` field is a boolean that determines whether the logs should be appended to a log file. Like the other fields, it is optional and can be set to `null` to keep the current option unchanged. Finally, the `color` field is a boolean that determines whether color should be used when printing the logs to the process stdout. It is also optional and can be set to `null` to keep the current option unchanged.
 
 Overall, these structs provide a flexible way to configure the runtime logger for the ckb project, allowing developers to set log levels for different modules and customize how the logs are outputted. This can be useful for debugging and monitoring the project during development and deployment.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ExtraLoggerConfig` struct?
 - The `ExtraLoggerConfig` struct is used to configure extra loggers for the runtime logger.
 

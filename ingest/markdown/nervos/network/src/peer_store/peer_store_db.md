@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/peer_store/peer_store_db.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/peer_store/peer_store_db.rs)
 
 The code provided is part of the ckb project and is responsible for managing the peer store. The peer store is responsible for storing information about peers, such as their IP address, port, and other metadata. The peer store is used by the network layer of the ckb project to manage connections to other nodes in the network.
 
@@ -11,7 +11,7 @@ The `PeerStore` struct is responsible for managing the peer store. It provides t
 The `move_file` function is a helper function used by the `dump_to_dir` method to move files between directories. It first tries to use the `rename` function to move the file, but if that fails, it falls back to copying the file and deleting the original.
 
 Overall, this code provides functionality for managing the peer store in the ckb project. It allows the peer store to be loaded and saved to disk, and provides functionality for managing the list of known and banned peers.
-## Questions: 
+## Questions:
  1. What is the purpose of the `AddrManager` and `BanList` structs?
 - The `AddrManager` struct manages a list of known network addresses, while the `BanList` struct manages a list of banned addresses.
 2. What is the format used to store the address and ban lists on disk?

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/synchronizer/get_headers_process.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/synchronizer/get_headers_process.rs)
 
 The `GetHeadersProcess` struct is a part of the ckb project and is responsible for processing incoming `getheaders` messages from peers. The purpose of this code is to handle the request and respond with a list of block headers that the peer does not have.
 
@@ -7,15 +7,15 @@ The `execute` method is the main entry point for this code. It takes in a `GetHe
 The `send_in_ibd` method constructs an `InIBD` message and sends it to the peer.
 
 Overall, this code is an important part of the synchronization process in the ckb project. It allows peers to request block headers that they do not have and receive them from the local node. This is crucial for maintaining a consistent view of the blockchain across all nodes in the network.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-   
+
    This code defines a struct `GetHeadersProcess` and its implementation, which handles the `getheaders` message in the CKB protocol. It retrieves headers from the active chain and sends them back to the requesting peer.
 
 2. What external dependencies does this code have?
-   
+
    This code depends on several other modules and crates, including `synchronizer`, `utils`, `ckb_constant`, `ckb_logger`, `ckb_network`, and `ckb_types`.
 
 3. What is the significance of the `MAX_LOCATOR_SIZE` constant?
-   
+
    The `MAX_LOCATOR_SIZE` constant is used to limit the number of block locator hashes that can be included in a `getheaders` message. If the number of hashes exceeds this limit, the message is considered malformed and an error is returned.

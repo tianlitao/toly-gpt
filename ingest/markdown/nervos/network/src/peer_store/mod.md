@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/peer_store/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/peer_store/mod.rs)
 
 # Code Explanation
 
@@ -33,7 +33,7 @@ The code defines several types:
 The `PeerStore` struct is the main component of the peer store. It is responsible for managing the peer store database, and provides methods for adding, removing, and updating peers in the peer store. The `PeerStore` struct also provides methods for scoring peers, banning peers, and reporting peers.
 
 ## Usage
-The peer store is used by the node to manage the peers in the network. The node can use the peer store to keep track of the peers it has connected to, and to manage the connection process. The peer store is also used to score peers, ban peers, and report peers. For example, the node can use the peer store to score peers based on their behavior, and to ban peers that exhibit malicious behavior. The peer store can also be used to report peers that are behaving maliciously to other nodes in the network. 
+The peer store is used by the node to manage the peers in the network. The node can use the peer store to keep track of the peers it has connected to, and to manage the connection process. The peer store is also used to score peers, ban peers, and report peers. For example, the node can use the peer store to score peers based on their behavior, and to ban peers that exhibit malicious behavior. The peer store can also be used to report peers that are behaving maliciously to other nodes in the network.
 
 Example usage:
 ```rust
@@ -60,7 +60,7 @@ peer_store.ban_peer(&peer_id);
 let report_result = peer_store.report_peer(&peer_id);
 assert!(report_result.is_banned());
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `addr_manager` and `ban_list` modules?
 - The `addr_manager` module implements functionality for managing node address information, while the `ban_list` module implements functionality for banning peers.
 2. What is the significance of the constants defined in the code?

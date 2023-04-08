@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/services/dns_seeding/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/services/dns_seeding/mod.rs)
 
 The `DnsSeedingService` module is responsible for seeding the network with peer addresses obtained from DNS TXT records. The module is designed to be used as part of the larger `ckb` project, which is a cryptocurrency implementation based on the Nervos CKB blockchain.
 
@@ -13,7 +13,7 @@ The `seeding` method is the heart of the DNS seeding process. It first checks if
 For each seed node, the method queries the DNS resolver for TXT records. If the query is successful, it iterates over the records and decodes them using the `SeedRecord` struct. If the decoding is successful, the method adds the address to the peer store using the `add_addr` method. If the decoding fails, the method logs an error using the `debug` macro from the `ckb_logger` crate.
 
 In summary, the `DnsSeedingService` module is responsible for seeding the network with peer addresses obtained from DNS TXT records. It is designed to be used as part of the larger `ckb` project, which is a cryptocurrency implementation based on the Nervos CKB blockchain. The module uses the `NetworkState` struct to manage the state of the network and the `tokio` crate to perform asynchronous operations.
-## Questions: 
+## Questions:
  1. What is the purpose of the `DnsSeedingService` struct and how is it used?
 - The `DnsSeedingService` struct is used for DNS seeding and is created with a network state and a list of seeds. It has a `start` method that runs an infinite loop and calls the `seeding` method every 10 seconds.
 2. What is the significance of the `TXT_VERIFY_PUBKEY` constant and how is it used?

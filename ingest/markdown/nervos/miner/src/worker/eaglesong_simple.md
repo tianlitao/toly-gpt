@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/miner/src/worker/eaglesong_simple.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/miner/src/worker/eaglesong_simple.rs)
 
 The code defines a struct called `EaglesongSimple` that implements the `Worker` trait. The purpose of this struct is to solve a proof-of-work (PoW) puzzle using the Eaglesong hash function. The struct has several fields, including a boolean flag to indicate whether the worker should start solving the puzzle, a `pow_work` field to store the current work to be solved, a `target` field to store the target difficulty of the puzzle, a `nonce_tx` field to send the solution nonce to the main thread, a `worker_rx` field to receive messages from the main thread, a `nonces_found` field to keep track of the number of solutions found, and an `extra_hash_function` field to specify an additional hash function to be used in conjunction with Eaglesong.
 
@@ -9,7 +9,7 @@ The `EaglesongSimple` struct has several private methods, including `poll_worker
 The `EaglesongSimple` struct implements the `Worker` trait's `run` method, which is called by the main thread to start the worker. The method runs in an infinite loop and repeatedly calls `poll_worker_message` to receive messages from the main thread and `solve` to solve the PoW puzzle. The method also updates a progress bar to display the hash rate and number of solutions found. If the worker is stopped by the main thread, the method resets the worker's state and sleeps for 100 milliseconds before resuming the loop.
 
 Overall, this code provides a worker implementation for solving a PoW puzzle using the Eaglesong hash function. The worker can be used in conjunction with other workers to parallelize the PoW solving process and improve the overall hash rate of the system.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code is a worker implementation for the EaglesongSimple struct, which is used for mining in the ckb project.
 

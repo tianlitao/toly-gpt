@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/metrics/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/metrics/src/lib.rs)
 
 # ckb-metrics
 
@@ -26,15 +26,15 @@ The `gather()` function is used to collect all the metrics data. It returns a ve
 The `handle()` function is used to check whether the metrics service is enabled. If it is enabled, it returns `Some(&'static METRICS)`, otherwise it returns `None`.
 
 The `tests` module contains tests to ensure that all metrics have valid names and labels.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb-metrics` crate and how does it relate to the `ckb-metrics-service` runtime?
-   
+
    Answer: The `ckb-metrics` crate is a set of tools for metrics, while the `ckb-metrics-service` runtime handles the metrics data in CKB. The crate is a lightweight metrics facade used in CKB.
 
 2. What metrics are being tracked in this code and how are they being collected?
-   
+
    Answer: The code is tracking various metrics such as CKB chain tip header number, size of all frozen data, effective amount of data read, and more. These metrics are being collected using various Prometheus macros such as `register_int_gauge`, `register_int_counter`, `register_histogram_vec`, and `register_int_gauge_vec`.
 
 3. How does the `handle()` function determine whether the metrics service is enabled or not?
-   
+
    Answer: The `handle()` function determines whether the metrics service is enabled or not by checking the value of the `METRICS_SERVICE_ENABLED` static variable. If the value is set, it returns `Some(&METRICS)`, otherwise it returns `None`. The `ENABLE_COLLECT_METRICS` thread-local variable is used to cache the value of `METRICS_SERVICE_ENABLED` to avoid repeated lookups.

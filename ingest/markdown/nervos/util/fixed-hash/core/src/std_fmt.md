@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/fixed-hash/core/src/std_fmt.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/fixed-hash/core/src/std_fmt.rs)
 
 This code defines a macro called `impl_std_fmt` that generates implementations of the `Debug`, `LowerHex`, and `Display` traits for four different types: `H160`, `H256`, `H512`, and `H520`. These types are defined in other parts of the `ckb` project and represent fixed-size arrays of bytes with lengths of 20, 32, 64, and 65 bytes, respectively.
 
@@ -9,7 +9,7 @@ The `LowerHex` and `Display` implementations both print the hexadecimal represen
 By using this macro to generate the implementations of these traits, the code avoids duplicating the same code for each of the four types. This makes the code more concise and easier to maintain.
 
 In the larger `ckb` project, these implementations are likely used to provide formatted output for various types of data, such as cryptographic hashes or addresses. For example, the `H160` type might be used to represent the address of a user's account, and the `Display` implementation could be used to display that address in a user interface. Similarly, the `Debug` implementation could be used for debugging purposes, such as printing the contents of a data structure that contains one of these types.
-## Questions: 
+## Questions:
  1. What is the purpose of the `impl_std_fmt` macro and how is it used in this code?
    - The `impl_std_fmt` macro is used to implement the `Debug`, `LowerHex`, and `Display` traits for the specified types (`H160`, `H256`, `H512`, and `H520`). It is used to format these types in different ways for debugging, hexadecimal output, and display output.
 2. What is the significance of the numbers `20`, `32`, `64`, and `65` in the `impl_std_fmt` macro invocations?

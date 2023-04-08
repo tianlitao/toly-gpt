@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/reset_data.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/reset_data.rs)
 
 The `reset_data` function is used to reset data for the ckb project. It takes in a `ResetDataArgs` struct as an argument, which contains various paths to directories and files that can be reset. The function first initializes empty vectors to store the target directories and files. It then checks which reset options were specified in the `ResetDataArgs` struct and adds the corresponding directories and files to the target vectors.
 
@@ -19,7 +19,7 @@ let args = ResetDataArgs {
 
 reset_data(args).unwrap();
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code is a function that resets data for the ckb project by deleting specified directories and files.
 

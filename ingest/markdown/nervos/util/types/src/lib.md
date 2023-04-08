@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/lib.rs)
 
 The code above is a module called "Core Types Library" that provides essential types for the CKB (Nervos Common Knowledge Base) project. The purpose of this module is to provide a set of pre-defined types that can be used throughout the project to ensure consistency and reduce the likelihood of errors.
 
@@ -7,15 +7,15 @@ The module contains several sub-modules, including "prelude", "generated", "core
 One example of how this module might be used is in defining a new transaction type. The developer could import the "core" module and use the pre-defined Transaction type to ensure consistency with other parts of the project. They could also use the "constants" module to define pre-defined constants used in the transaction. Finally, they could use the "utilities" module to define utility functions for working with the transaction.
 
 Overall, the "Core Types Library" module is an essential part of the CKB project, providing a set of pre-defined types and utility functions that can be used throughout the project to ensure consistency and reduce the likelihood of errors.
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
-    
+
     This code file is the Core Types Library for CKB, providing essential types for the project.
 
 2. What external dependencies does this code file have?
-    
+
     This code file has external dependencies on the `bytes`, `ckb_fixed_hash`, `molecule`, and `numext_fixed_uint` crates.
 
 3. What other modules or files are related to this code file?
-    
+
     This code file has related modules for `prelude`, `core`, `constants`, `conversion`, `extension`, and `utilities`, as well as a `tests` module for testing. It also has a `generated` module for packed data structures.

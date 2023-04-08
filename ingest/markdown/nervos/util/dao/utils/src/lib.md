@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/dao/utils/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/dao/utils/src/lib.rs)
 
 The code in this file provides utility functions for operating the dao field and NervosDAO related errors. The `ckb` project uses this code to calculate the dao field for the genesis block and extract `ar`, `c`, `s`, and `u` from a `Byte32` data type.
 
@@ -13,7 +13,7 @@ The `pack_dao_data` function packs `ar`, `c`, `s`, and `u` into a `Byte32` data 
 The `tests` module contains unit tests for the `extract_dao_data` and `pack_dao_data` functions. These tests ensure that the functions work as expected.
 
 Overall, this code provides essential utility functions for operating the dao field and NervosDAO related errors in the `ckb` project. These functions are used to calculate the dao field for the genesis block and extract `ar`, `c`, `s`, and `u` from a `Byte32` data type.
-## Questions: 
+## Questions:
  1. What is the purpose of this crate and what does it provide?
 - This crate provides utility functions to operate the dao field and NervosDAO related errors.
 

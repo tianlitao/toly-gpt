@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/crypto/src/secp/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/crypto/src/secp/error.rs)
 
-This code defines an error type for the ckb project that wraps the SecpError type from the secp256k1 library. The purpose of this code is to provide a standardized set of error types that can be used throughout the project when dealing with cryptographic operations. 
+This code defines an error type for the ckb project that wraps the SecpError type from the secp256k1 library. The purpose of this code is to provide a standardized set of error types that can be used throughout the project when dealing with cryptographic operations.
 
 The Error type is defined as an enum with several variants, each representing a different type of error that can occur during cryptographic operations. These variants include InvalidPrivKey, InvalidPubKey, InvalidSignature, InvalidMessage, InvalidRecoveryId, and Other. The Other variant is used to represent any error that is not part of this list.
 
@@ -25,7 +25,7 @@ fn sign_message(msg: &[u8], privkey: &SecretKey) -> Result<Signature, Error> {
 ```
 
 In this example, the sign_message function takes a message and a private key and returns a signature. If an error occurs during the cryptographic operations, it returns an instance of the Error type with the appropriate variant set. The calling code can then handle the error in a standardized way.
-## Questions: 
+## Questions:
  1. What external crates or libraries are being used in this code?
 - The code is using the `secp256k1` crate and the `thiserror` crate.
 

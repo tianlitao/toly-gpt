@@ -1,20 +1,20 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/mod.rs)
 
-This code is a module that exports various configurations for different components of the ckb project. The ckb project is a blockchain implementation that aims to provide a secure and decentralized platform for building decentralized applications. 
+This code is a module that exports various configurations for different components of the ckb project. The ckb project is a blockchain implementation that aims to provide a secure and decentralized platform for building decentralized applications.
 
-The module exports configurations for the following components: 
-- `db`: This module provides a configuration for the database used by the ckb node. 
-- `indexer`: This module provides a configuration for the indexer used by the ckb node. 
-- `memory_tracker`: This module provides a configuration for the memory tracker used by the ckb node. 
-- `miner`: This module provides various configurations for the miner used by the ckb node. These configurations include the client configuration, miner configuration, dummy configuration, EaglesongSimple configuration, and worker configuration. 
-- `network`: This module provides configurations for the network layer of the ckb node. These configurations include the network configuration, header map configuration, support protocol, and sync configuration. 
-- `network_alert`: This module provides a configuration for the network alert used by the ckb node. 
-- `notify`: This module provides a configuration for the notification system used by the ckb node. 
-- `rpc`: This module provides a configuration for the RPC server used by the ckb node. 
-- `store`: This module provides a configuration for the store used by the ckb node. 
-- `tx_pool`: This module provides a configuration for the transaction pool used by the ckb node. 
+The module exports configurations for the following components:
+- `db`: This module provides a configuration for the database used by the ckb node.
+- `indexer`: This module provides a configuration for the indexer used by the ckb node.
+- `memory_tracker`: This module provides a configuration for the memory tracker used by the ckb node.
+- `miner`: This module provides various configurations for the miner used by the ckb node. These configurations include the client configuration, miner configuration, dummy configuration, EaglesongSimple configuration, and worker configuration.
+- `network`: This module provides configurations for the network layer of the ckb node. These configurations include the network configuration, header map configuration, support protocol, and sync configuration.
+- `network_alert`: This module provides a configuration for the network alert used by the ckb node.
+- `notify`: This module provides a configuration for the notification system used by the ckb node.
+- `rpc`: This module provides a configuration for the RPC server used by the ckb node.
+- `store`: This module provides a configuration for the store used by the ckb node.
+- `tx_pool`: This module provides a configuration for the transaction pool used by the ckb node.
 
-By exporting these configurations, other modules in the ckb project can easily access and use them. For example, the `rpc` module exports both a configuration and a module, which can be used to start an RPC server for the ckb node. 
+By exporting these configurations, other modules in the ckb project can easily access and use them. For example, the `rpc` module exports both a configuration and a module, which can be used to start an RPC server for the ckb node.
 
 ```rust
 use ckb::rpc::{Config as RpcConfig, Module as RpcModule};
@@ -29,7 +29,7 @@ rpc_module.start();
 ```
 
 Overall, this module plays an important role in the ckb project by providing a centralized location for accessing and configuring various components of the node.
-## Questions: 
+## Questions:
  1. What are the different modules included in this project?
 - The project includes modules for database, indexing, memory tracking, mining, networking, notifications, RPC, storage, and transaction pool.
 

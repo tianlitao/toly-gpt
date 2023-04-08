@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/cost_model.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/cost_model.rs)
 
 # CKB VM Cost Model
 
@@ -43,7 +43,7 @@ assert_eq!(cycles, 2);
 ```
 
 The code is used in the larger CKB project to calculate the cost of executing scripts in the CKB blockchain. The cost is used to prevent spam and ensure that scripts are executed efficiently.
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file contains a cost model that assigns cycles to instructions in the CKB VM.
 

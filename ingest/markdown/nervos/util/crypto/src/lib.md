@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/crypto/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/crypto/src/lib.rs)
 
 The code above is a module within the ckb project that serves as a crypto utility library. Specifically, it is a legacy crate that is currently only used for testing purposes. The code is written in Rust and is designed to provide cryptographic functionality to other parts of the ckb project.
 
@@ -21,7 +21,7 @@ fn main() {
 ```
 
 In this example, we create a new instance of the `Secp256k1` struct from the `secp` module. We then use this instance to sign a message and verify the resulting signature. This demonstrates how the ckb crypto utility library can be used to implement secure and reliable cryptographic functionality within the larger ckb project.
-## Questions: 
+## Questions:
  1. What is the purpose of this crate and what functionality does it provide?
    - This crate is a CKB crypto util library, but it is currently only used in tests and is kept as legacy code.
 2. What is the significance of the `#[cfg(feature = "secp")]` attribute and what does it do?

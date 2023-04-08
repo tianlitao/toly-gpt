@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/syscalls/load_header.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/syscalls/load_header.rs)
 
 The `LoadHeader` module is responsible for loading headers from the blockchain. It is a system call that can be used by the CKB VM to retrieve header information for a given block. The module is part of the larger CKB project, which is a public blockchain that uses the Nervos Network to provide a secure and decentralized platform for building decentralized applications.
 
@@ -27,7 +27,7 @@ let return_code = machine.registers()[A0].to_u8();
 let len = machine.cycles();
 let data = machine.memory_mut().load_bytes(0, len as usize).unwrap();
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file implements a system call for loading header data in the CKB blockchain.
 

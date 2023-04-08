@@ -1,10 +1,10 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/spawn/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/spawn/src/lib.rs)
 
-The code defines a trait called `Spawn` which is an abstract async runtime that can spawn a future onto the runtime. The purpose of this code is to provide a way to spawn a future onto the runtime's executor. 
+The code defines a trait called `Spawn` which is an abstract async runtime that can spawn a future onto the runtime. The purpose of this code is to provide a way to spawn a future onto the runtime's executor.
 
-The `Spawn` trait has one method called `spawn_task` which takes a future and spawns it onto the runtime's executor. The future must implement the `Future` trait and have an output of `()` (i.e. it returns nothing). The future must also be `Send` and have a static lifetime. 
+The `Spawn` trait has one method called `spawn_task` which takes a future and spawns it onto the runtime's executor. The future must implement the `Future` trait and have an output of `()` (i.e. it returns nothing). The future must also be `Send` and have a static lifetime.
 
-This code can be used in the larger project to provide a way to spawn a future onto the runtime's executor. For example, if there is a task that needs to be executed asynchronously, it can be wrapped in a future and then spawned onto the runtime's executor using the `spawn_task` method. 
+This code can be used in the larger project to provide a way to spawn a future onto the runtime's executor. For example, if there is a task that needs to be executed asynchronously, it can be wrapped in a future and then spawned onto the runtime's executor using the `spawn_task` method.
 
 Here is an example of how this code can be used:
 
@@ -35,7 +35,7 @@ fn main() {
 ```
 
 In this example, we define a custom runtime that implements the `Spawn` trait. We then define an async task called `my_task` which does some async work. Finally, we spawn the `my_task` future onto the runtime's executor using the `spawn_task` method.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall project?
    - This code defines a trait called `Spawn` which is an abstract async runtime used to spawn a future onto the runtime's executor. It likely fits into the larger project as a foundational component for async functionality.
 2. What is the expected behavior of the `spawn_task` function?

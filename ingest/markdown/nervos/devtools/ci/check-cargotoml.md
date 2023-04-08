@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/devtools/ci/check-cargotoml.sh)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/devtools/ci/check-cargotoml.sh)
 
 The code is a bash script that checks the correctness of the `Cargo.toml` files in the `ckb` project. The `Cargo.toml` file is a configuration file for Rust projects that contains metadata about the project, its dependencies, and other configuration options. The script checks the following aspects of the `Cargo.toml` files:
 
@@ -19,7 +19,7 @@ The script is intended to be run as part of the build process for the `ckb` proj
 ```
 
 If the script finds any errors, it prints an error message and exits with a non-zero status code, indicating that the build has failed. Otherwise, it prints a message indicating that the check has completed successfully.
-## Questions: 
+## Questions:
  1. What is the purpose of this script?
 - This script checks the `Cargo.toml` files in the `ckb` project for errors related to package name, version, license, dependencies, and other metadata.
 

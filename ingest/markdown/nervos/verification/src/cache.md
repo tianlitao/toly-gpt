@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/verification/src/cache.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/verification/src/cache.rs)
 
 The code defines a cache for transaction (TX) verification results in the ckb project. The cache is implemented as an LRU (Least Recently Used) cache, which means that the least recently used entries are evicted when the cache reaches its maximum size. The cache is initialized with a maximum size of 30,000 entries.
 
@@ -9,7 +9,7 @@ The cache is useful because verifying a TX can be a computationally expensive op
 The code provides two methods for constructing cache entries: `completed` and `suspended`. The `completed` method takes the cycles and fee of a fully verified TX and constructs a Completed entry. The `suspended` method takes a snapshot of a partially verified TX and its fee, and constructs a Suspended entry.
 
 Overall, this code provides a simple and efficient way to cache TX verification results in the ckb project, which can help improve performance and reduce computational costs.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code defines a transaction verification cache for the ckb project, which is used to store completed and suspended transaction entries to improve performance during verification.
 

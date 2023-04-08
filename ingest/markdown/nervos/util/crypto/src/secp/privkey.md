@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/crypto/src/secp/privkey.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/crypto/src/secp/privkey.rs)
 
-The `Privkey` module provides a wrapper around a 256-bit private key used in an ECDSA signature. It contains methods for signing a message, creating a public key from the private key, and zeroing out the key when it is dropped. 
+The `Privkey` module provides a wrapper around a 256-bit private key used in an ECDSA signature. It contains methods for signing a message, creating a public key from the private key, and zeroing out the key when it is dropped.
 
 The `sign_recoverable` method takes a `Message` and returns a `Result` containing a `Signature` or an `Error`. It uses the `SECP256K1` context to sign the message with the private key and a nonce generated using RFC6979. The resulting signature is returned as a `Signature` object.
 
@@ -22,15 +22,15 @@ let privkey = Privkey::from_slice(&[1; 32]);
 let message = Message::from_slice(&[2; 32]).unwrap();
 let signature = privkey.sign_recoverable(&message).unwrap();
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb_fixed_hash` and `secp256k1` crates being used in this code?
-   
+
    Answer: The `ckb_fixed_hash` crate is used for the `H256` type, which represents a 256-bit hash value. The `secp256k1` crate is used for ECDSA signature generation and verification.
 
 2. What is the purpose of the `sign_recoverable` method and what does it return?
-   
+
    Answer: The `sign_recoverable` method generates a recoverable ECDSA signature for a given message using the private key represented by the `Privkey` instance. It returns a `Result` containing a `Signature` instance if the signature generation is successful, or an `Error` if it fails.
 
 3. Why does the `zeroize` method use `core::ptr::write_volatile` and `core::sync::atomic` memory fences?
-   
+
    Answer: The `zeroize` method is used to securely zero out the private key data when the `Privkey` instance is dropped. The use of `write_volatile` and `atomic` memory fences ensures that the data is actually written to memory and not optimized away by the compiler.

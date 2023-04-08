@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/launcher/src/migrations/add_chain_root_mmr.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/launcher/src/migrations/add_chain_root_mmr.rs)
 
 The code defines a migration for adding a Merkle Mountain Range (MMR) to the ChainDB of the ckb project. MMR is a data structure used to store and verify the integrity of a large set of data, such as the blockchain. The purpose of this migration is to create an MMR of the block headers in the ChainDB and store it in the database for future use.
 
@@ -15,15 +15,15 @@ ckb-db-migrate --db rocksdb://path/to/rocksdb --to 20221208151540
 ```
 
 This command migrates the RocksDB instance located at `path/to/rocksdb` to the version `20221208151540` using the `AddChainRootMMR` migration.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-   
+
    This code is a migration script that adds a Merkle Mountain Range (MMR) of chain roots to the database for the ckb blockchain.
 
 2. What dependencies does this code use?
-   
+
    This code uses several dependencies, including `ckb_app_config`, `ckb_db`, `ckb_db_migration`, `ckb_error`, `ckb_store`, and `ckb_types`.
 
 3. What is the expected output of this code?
-   
+
    The expected output of this code is an updated RocksDB database with a new MMR of chain roots for the ckb blockchain. The progress of the migration is displayed using a progress bar.

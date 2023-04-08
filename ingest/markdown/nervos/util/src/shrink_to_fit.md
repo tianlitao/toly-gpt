@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/src/shrink_to_fit.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/src/shrink_to_fit.rs)
 
 The code provided is a macro called `shrink_to_fit` that shrinks a `HashMap` when it reserves more than a specified number of slots for future entries. The macro takes two arguments: the `HashMap` to be shrunk and the threshold number of slots. If the capacity of the `HashMap` is greater than the sum of its length and the threshold, the `shrink_to_fit` method is called on the `HashMap` to reduce its capacity to the minimum required to hold its current elements.
 
@@ -16,7 +16,7 @@ shrink_to_fit!(h, 10);
 ```
 
 Overall, the `shrink_to_fit` macro provides a simple and convenient way to optimize memory usage in `HashMap` instances within the larger project.
-## Questions: 
+## Questions:
  1. What does this code do?
    - This code defines a macro called `shrink_to_fit` that takes a map and a threshold as input, and shrinks the map's capacity if it reserves more than the threshold number of slots for future entries.
 2. What is the purpose of shrinking the map's capacity?

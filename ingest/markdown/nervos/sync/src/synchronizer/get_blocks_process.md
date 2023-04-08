@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/synchronizer/get_blocks_process.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/synchronizer/get_blocks_process.rs)
 
-The `GetBlocksProcess` struct and its implementation define a process for handling a `GetBlocks` message received from a peer in the CKB network. The `GetBlocks` message is used to request a list of block headers or full blocks from a peer. 
+The `GetBlocksProcess` struct and its implementation define a process for handling a `GetBlocks` message received from a peer in the CKB network. The `GetBlocks` message is used to request a list of block headers or full blocks from a peer.
 
 The `GetBlocksProcess` struct has four fields: `message`, which is the `GetBlocks` message received from the peer; `synchronizer`, which is an instance of the `Synchronizer` struct that manages the synchronization of the local blockchain with the network; `nc`, which is a reference to the CKB protocol context; and `peer`, which is the index of the peer that sent the `GetBlocks` message.
 
@@ -8,10 +8,10 @@ The `execute` method of the `GetBlocksProcess` struct processes the `GetBlocks` 
 
 The method then retrieves the active chain from the `Synchronizer` instance and iterates over the block hashes in the `GetBlocks` message, up to a limit defined by the `INIT_BLOCKS_IN_TRANSIT_PER_PEER` constant. For each block hash, the method checks if the hash is a duplicate of a previously requested block. If it is a duplicate, the method returns an error status with a message indicating that the block is a duplicate. If the block hash is not a duplicate, the method checks if the block is valid and verified by the active chain. If the block is not valid, the method ignores the request and continues to the next block hash. If the block is valid, the method retrieves the block from the active chain and sends it to the requesting peer.
 
-If the method cannot find a block in the active chain, it stops processing the `GetBlocks` message and returns a status indicating that the block was not found. 
+If the method cannot find a block in the active chain, it stops processing the `GetBlocks` message and returns a status indicating that the block was not found.
 
 Overall, the `GetBlocksProcess` process is an important part of the CKB network protocol that enables peers to request blocks from each other and synchronize their local blockchains with the network.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code defines a struct `GetBlocksProcess` and its implementation, which handles the processing of a `GetBlocks` message received from a peer during block synchronization.
 

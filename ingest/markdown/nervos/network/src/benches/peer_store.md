@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/benches/peer_store.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/benches/peer_store.rs)
 
 The code is a benchmarking tool for the `PeerStore` module of the `ckb_network` library. The `PeerStore` module is responsible for storing and managing information about network peers, such as their addresses and connection status. The benchmarking tool measures the performance of two functions in the `PeerStore` module: `add_addr` and `fetch_random_addrs`.
 
@@ -9,7 +9,7 @@ The `fetch_random_addrs` function retrieves a specified number of random address
 The benchmarking tool uses the `criterion` library to measure the performance of the `add_addr` and `fetch_random_addrs` functions. The `criterion` library provides a convenient way to run benchmarks and collect statistics on their performance. The `criterion_group!` and `criterion_main!` macros are used to define and run the benchmarks.
 
 Overall, the benchmarking tool is useful for measuring the performance of the `PeerStore` module in the `ckb_network` library. The tool can be used to identify performance bottlenecks and optimize the `PeerStore` module for better performance.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code is a benchmarking tool for the `PeerStore` module of the `ckb_network` crate, which is used for managing peer addresses in a P2P network.
 

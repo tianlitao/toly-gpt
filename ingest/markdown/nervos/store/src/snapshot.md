@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/store/src/snapshot.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/store/src/snapshot.rs)
 
 The `StoreSnapshot` struct is a wrapper around a RocksDB snapshot that provides read-only access to the database. It implements the `ChainStore` trait, which defines methods for interacting with the database. The `StoreCache` struct is used to cache database entries in memory for faster access.
 
@@ -16,7 +16,7 @@ let snapshot = StoreSnapshot::new(db);
 let block_hash = snapshot.get(Col::BlockHash, &[0; 32]).unwrap();
 println!("Block hash: {:?}", block_hash);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `StoreSnapshot` struct?
 - The `StoreSnapshot` struct is a wrapper around a `RocksDBSnapshot` that implements the `ChainStore` trait and provides methods for accessing data in the database.
 

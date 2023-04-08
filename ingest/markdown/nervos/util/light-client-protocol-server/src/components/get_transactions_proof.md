@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/light-client-protocol-server/src/components/get_transactions_proof.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/light-client-protocol-server/src/components/get_transactions_proof.rs)
 
 The `GetTransactionsProofProcess` struct and its associated methods define the logic for processing a request for transaction proofs from a peer in the CKB network. This code is part of the larger CKB project, which is a public blockchain that uses the Nervos Common Knowledge Base (CKB) to store and verify transactions.
 
@@ -13,7 +13,7 @@ For the transactions that are included in blocks on the active chain, the method
 For the transactions that are missing, the method returns a list of the missing transaction hashes to the requesting peer.
 
 Overall, this code provides the logic for processing a request for transaction proofs from a peer in the CKB network. It retrieves the requested transactions from the local store, constructs proofs of inclusion for the transactions that are included in blocks on the active chain, and returns the proofs and a list of missing transactions to the requesting peer. This functionality is an important part of the CKB network, as it allows peers to verify the validity of transactions without having to download the entire blockchain.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what problem does it solve?
 - This code is part of a project called ckb and implements a process for getting transaction proofs. It allows a light client to verify transactions without downloading the entire blockchain.
 

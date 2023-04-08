@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/freezer/src/freezer.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/freezer/src/freezer.rs)
 
 The `Freezer` module is a memory-mapped append-only database that stores immutable chain data into flat files. It provides methods for creating a freezer at a specified path, opening a freezer at a temporary path, freezing a background process that periodically checks the chain data for any import progress and moves ancient data from the kv-db into the freezer, retrieving an item with the given number, returning the total item number in the freezer, and truncating any recent data above the provided threshold number.
 
@@ -9,7 +9,7 @@ The `freeze` method is the main method of the `Freezer` module. It takes a thres
 The `retrieve` method retrieves an item with the given number from the freezer files. The `number` method returns the total item number in the freezer. The `truncate` method truncates any recent data above the provided threshold number from the freezer files.
 
 Overall, the `Freezer` module is an important part of the `ckb` project that provides a memory-mapped append-only database to store immutable chain data into flat files. It is used to freeze the background process that periodically checks the chain data for any import progress and moves ancient data from the kv-db into the freezer. It provides methods for retrieving and truncating data from the freezer files.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Freezer` struct and how does it work?
 - The `Freezer` struct is a memory-mapped append-only database used to store immutable chain data into flat files. It works by periodically checking the chain data for any import progress and moving ancient data from the kv-db into the freezer.
 2. What is the purpose of the `Inner` struct and what does it contain?

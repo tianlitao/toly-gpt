@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/fixed-hash/core/src/std_str.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/fixed-hash/core/src/std_str.rs)
 
 This code defines several constants and macros for converting hexadecimal strings to fixed-size binary data types. The purpose of this code is to provide a convenient way to convert hexadecimal strings to binary data types that are commonly used in the CKB project.
 
@@ -16,7 +16,7 @@ use ckb_fixed_hash::{H160, H256};
 let h160 = H160::from_trimmed_str("0x1234567890abcdef1234567890abcdef12345678").unwrap();
 let h256 = H256::from_str("0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef").unwrap();
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `DICT_HEX_LO` and `DICT_HEX_HI` static arrays?
    - These arrays are used to convert hexadecimal characters to their corresponding byte values. `DICT_HEX_LO` is used for even-indexed characters and `DICT_HEX_HI` is used for odd-indexed characters.
 2. What is the difference between the `impl_std_str_fromstr` and `impl_from_trimmed_str` macros?

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/db/src/snapshot.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/db/src/snapshot.rs)
 
 The code defines a struct called `RocksDBSnapshot` which is a wrapper around a RocksDB snapshot. A snapshot is a point-in-time view of the database at the time it was created. The purpose of this code is to provide a way to interact with a RocksDB snapshot in a safe and efficient manner.
 
@@ -11,7 +11,7 @@ One interesting feature of the `get_pinned_cf_full` method is that it uses Rocks
 The `RocksDBSnapshot` struct also implements the `Iterate` and `IterateCF` traits which provide methods for iterating over the keys and values in the snapshot.
 
 Overall, this code provides a safe and efficient way to interact with a RocksDB snapshot. It can be used in the larger project to read data from the database without the risk of modifying it. For example, it could be used to implement a read-only API for accessing data in the database.
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file contains a RocksDB snapshot wrapper for the ckb project.
 

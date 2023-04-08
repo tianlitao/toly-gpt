@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/verification/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/verification/src/lib.rs)
 
-The code in this file is part of the CKB (Nervos Common Knowledge Base) project and is responsible for implementing non-contextual verification of blocks. The code achieves this by using newtypes abstraction struct. 
+The code in this file is part of the CKB (Nervos Common Knowledge Base) project and is responsible for implementing non-contextual verification of blocks. The code achieves this by using newtypes abstraction struct.
 
 The file contains several modules, including `block_verifier`, `cache`, `convert`, `error`, `genesis_verifier`, `header_verifier`, and `transaction_verifier`. These modules contain various functions and structs that are used to verify different aspects of a block, such as its header, transactions, and capacity.
 
@@ -8,7 +8,7 @@ The file also contains several public exports that can be used by other parts of
 
 One important constant defined in this file is `ALLOWED_FUTURE_BLOCKTIME`, which specifies the maximum amount of time that a block timestamp is allowed to exceed the current time before the block will be accepted. This value is set to 15 seconds.
 
-Overall, this file plays an important role in the CKB project by providing the necessary functionality to verify blocks. Other parts of the project can use the exports provided by this file to ensure that blocks are valid and can be added to the blockchain. 
+Overall, this file plays an important role in the CKB project by providing the necessary functionality to verify blocks. Other parts of the project can use the exports provided by this file to ensure that blocks are valid and can be added to the blockchain.
 
 Example usage of this file could include verifying a block's header before adding it to the blockchain:
 
@@ -25,7 +25,7 @@ if result.is_err() {
     /* header is valid */
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this crate and what does it verify?
 - This crate implements CKB non-contextual verification using newtypes abstraction struct and verifies blocks, headers, and transactions.
 2. What errors can be thrown by this crate and what do they represent?

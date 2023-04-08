@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/core/reward.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/core/reward.rs)
 
 The code defines several structs related to the rewards and issuance of the native token in the CKB project. These structs are used to represent the details of miner rewards issued by the block cellbase transaction, native token issuance, miner reward, and the rewards details for a block when it is finalized.
 
@@ -9,7 +9,7 @@ The purpose of these structs is to provide a way to represent the rewards and is
 The code also includes an implementation of the `From` trait for the `MinerReward` struct, which allows the conversion of a `BlockReward` struct to a `MinerReward` struct. This can be useful when working with both types of structs and needing to convert between them.
 
 Overall, this code provides a way to represent and work with the rewards and issuance of the native token in the CKB project, which is an essential aspect of the project's economic model.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it relate to the ckb project?
 - This code defines structs that represent the rewards and issuance details for a block in the ckb blockchain.
 

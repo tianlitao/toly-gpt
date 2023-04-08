@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/network-alert/src/verifier.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/network-alert/src/verifier.rs)
 
 The `Verifier` module is responsible for verifying messages in the ckb project. The purpose of this module is to ensure that messages are verified by multi-signature before notifying the user. This is done to prevent useless information from being broadcast on the entire network. The set of public keys is currently in the possession of the Nervos foundation.
 
@@ -16,15 +16,15 @@ let verifier = Verifier::new(config);
 let alert = packed::Alert::default();
 verifier.verify_signatures(&alert)?;
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-    
+
     This code is a message verification module that verifies a message by multi-signature before notifying the user. The set of public keys is currently in the possession of the Nervos foundation.
 
 2. What dependencies does this code have?
-    
+
     This code has dependencies on `ckb_app_config`, `ckb_error`, `ckb_logger`, `ckb_multisig`, and `ckb_types` crates.
 
 3. What is the expected input and output of the `verify_signatures` function?
-    
+
     The `verify_signatures` function takes an alert of type `packed::Alert` as input and returns a `Result<(), AnyError>` indicating whether the verification was successful or not.

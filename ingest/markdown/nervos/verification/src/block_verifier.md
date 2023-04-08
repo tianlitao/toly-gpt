@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/verification/src/block_verifier.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/verification/src/block_verifier.rs)
 
 The `BlockVerifier` struct is a block verifier that is independent of context. It contains several verifiers that are used to verify a block. The verifiers include `CellbaseVerifier`, `BlockBytesVerifier`, `BlockExtensionVerifier`, `BlockProposalsLimitVerifier`, `DuplicateVerifier`, and `MerkleRootVerifier`. The `BlockVerifier` is constructed with a `Consensus` object, which is used to get the maximum block proposals limit and the maximum block bytes.
 
@@ -23,15 +23,15 @@ let block_verifier = BlockVerifier::new(&consensus);
 let result = block_verifier.verify(&block);
 assert!(result.is_ok());
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `BlockVerifier` struct and how is it used?
-   
+
    The `BlockVerifier` struct is used to verify a block's validity by performing several checks that are independent of context. It contains several verifiers such as `CellbaseVerifier`, `BlockBytesVerifier`, `DuplicateVerifier`, and `MerkleRootVerifier`. It implements the `Verifier` trait and is used to verify a `BlockView` by calling its `verify` method.
 
 2. What does the `CellbaseVerifier` struct check for and how is it used?
-   
+
    The `CellbaseVerifier` struct checks if the first transaction in a block is a cellbase transaction and if it meets certain requirements such as having only one dummy input, having an empty output data, and having no type script. It is used by the `BlockVerifier` struct to verify a block's validity.
 
 3. What is the purpose of the `DuplicateVerifier` struct and how is it used?
-   
+
    The `DuplicateVerifier` struct is used to check for duplicate transactions or proposals in a block. It is used by the `BlockVerifier` struct to verify a block's validity. It creates two `HashSet`s to keep track of seen transactions and proposals, and returns an error if a duplicate is found.

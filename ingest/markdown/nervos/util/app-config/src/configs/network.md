@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/network.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/network.rs)
 
 This code defines a configuration struct `Config` for a network service. The struct contains various options for configuring the behavior of the network service, such as maximum number of connected peers, network data storage directory path, list of DNS servers to discover peers, and more. The struct also contains methods for reading and writing the network secret key, generating a random key if the file does not exist, and getting the list of whitelist peers and bootnodes.
 
@@ -7,7 +7,7 @@ The `Config` struct is used in the larger project to configure the behavior of t
 The code also defines a `SyncConfig` struct for configuring chain synchronization options, such as the header map configuration and minimum chain work. The `SupportProtocol` enum lists the supported protocols for the network service, such as ping, discovery, and sync.
 
 Overall, this code provides a flexible and configurable network service for the larger project, allowing for fine-grained control over the behavior of the network and chain synchronization.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Config` struct and what options does it provide?
 - The `Config` struct provides network configuration options for the ckb project, such as maximum number of allowed connected peers, network data storage directory path, list of DNS servers to discover peers, and more.
 2. What is the purpose of the `SyncConfig` struct and what options does it provide?

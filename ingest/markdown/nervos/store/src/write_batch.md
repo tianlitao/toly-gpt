@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/store/src/write_batch.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/store/src/write_batch.rs)
 
 The `StoreWriteBatch` struct is a wrapper around a RocksDB write batch, which is a collection of write operations that can be executed atomically. This struct provides methods for inserting and deleting data from the database, as well as some utility methods for checking the size and state of the batch.
 
@@ -15,7 +15,7 @@ The `delete_cells` method removes a batch of cells from the database. It takes a
 The `delete_block_body` method removes the block body from the database for a given block number, block hash, and transaction length. It removes the uncle, extension, and proposal IDs from the `COLUMN_BLOCK_UNCLE`, `COLUMN_BLOCK_EXTENSION`, and `COLUMN_BLOCK_PROPOSAL_IDS` columns, respectively. It also removes the number-hash mapping from the `COLUMN_NUMBER_HASH` column. Finally, it removes the transaction keys and their corresponding data from the `COLUMN_BLOCK_BODY` column.
 
 The `delete_block` method removes an entire block from the database for a given block number, block hash, and transaction length. It removes the block header from the `COLUMN_BLOCK_HEADER` column, and then calls `delete_block_body` to remove the block body.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code defines a struct `StoreWriteBatch` that provides methods for putting, deleting, and inserting cells and blocks into a RocksDB database.
 

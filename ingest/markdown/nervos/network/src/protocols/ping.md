@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/protocols/ping.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/protocols/ping.rs)
 
 The `PingHandler` struct is a protocol handler for the ping protocol used in the ckb project. The purpose of this protocol is to periodically send ping messages to connected peers and receive pong messages in response. This allows the node to measure the round-trip time (RTT) to its peers and detect when a peer becomes unresponsive.
 
@@ -11,7 +11,7 @@ The `ping_peers` method is called periodically to send ping messages to connecte
 The `PingMessage` struct defines the format of ping and pong messages using the `packed` types from the `ckb-types` crate. The `build_ping` and `build_pong` methods create ping and pong messages with a given nonce value. The `decode` method parses a byte slice into a `PingPayload` enum that represents either a ping or pong message.
 
 Overall, the `PingHandler` protocol handler is an important component of the ckb node's networking stack that allows it to monitor the responsiveness of its peers and maintain a healthy peer-to-peer network.
-## Questions: 
+## Questions:
  1. What is the purpose of the `PingHandler` struct and how does it work?
 - The `PingHandler` struct is a protocol handler for the ping protocol. It periodically sends ping messages to connected peers and checks for timeout if no pong message is received within a certain duration. It also handles received ping and pong messages and updates the ping status of peers accordingly.
 

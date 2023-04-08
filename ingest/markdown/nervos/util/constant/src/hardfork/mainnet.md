@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/constant/src/hardfork/mainnet.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/constant/src/hardfork/mainnet.rs)
 
-This code defines several constants related to the CKB (Nervos Network) blockchain. 
+This code defines several constants related to the CKB (Nervos Network) blockchain.
 
 The first constant, `CHAIN_SPEC_NAME`, is a string that represents the name of the chain specification. This constant is likely used throughout the project to identify the specific chain being used.
 
@@ -21,7 +21,7 @@ if current_epoch >= RFC0028_START_EPOCH {
 ```
 
 In this example, the code checks the current epoch number against the `RFC0028_START_EPOCH` and `CKB2021_START_EPOCH` constants to determine which version of the blockchain is being used, and performs different logic accordingly.
-## Questions: 
+## Questions:
  1. What is the purpose of the `CHAIN_SPEC_NAME` constant?
    - The `CHAIN_SPEC_NAME` constant is used to specify the name of the chain specification.
 

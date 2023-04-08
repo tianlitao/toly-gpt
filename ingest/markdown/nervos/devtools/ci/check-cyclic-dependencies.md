@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/devtools/ci/check-cyclic-dependencies.py)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/devtools/ci/check-cyclic-dependencies.py)
 
 This Python script is part of the ckb project and is used to check the dependencies between crates in the project's workspace. The script reads the `Cargo.toml` files of each crate in the workspace and extracts the local dependencies of each crate. It then builds a dependency graph between the crates and performs a topological sort to ensure that the crates are sorted in the correct order based on their dependencies.
 
@@ -17,12 +17,12 @@ This script is useful for ensuring that the crates in the ckb project are sorted
 ```
 python3 check_deps.py --dev
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb` project?
-- As a code documentation expert, I cannot determine the purpose of the `ckb` project just by looking at this code. 
+- As a code documentation expert, I cannot determine the purpose of the `ckb` project just by looking at this code.
 
 2. What does the code do with the `members` list?
-- The code reads the `Cargo.toml` file and parses the `members` list, which contains the paths of the crates in the workspace. 
+- The code reads the `Cargo.toml` file and parses the `members` list, which contains the paths of the crates in the workspace.
 
 3. What is the purpose of the `crate_deps` and `crate_deps_reverse` dictionaries?
 - The `crate_deps` dictionary maps each crate to a set of its local dependencies, while the `crate_deps_reverse` dictionary maps each local dependency to a set of the crates that depend on it. These dictionaries are used to perform a topological sort of the crates in the workspace based on their dependencies.

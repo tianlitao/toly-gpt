@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/fixed-hash/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/fixed-hash/src/lib.rs)
 
 The `ckb_fixed_hash` module provides several simple fixed-sized hash data types and their static constructors. The purpose of this module is to allow developers to use fixed-sized hash data types in their Rust programs. The module provides four hash data types: `H160`, `H256`, `H512`, and `H520`. Each of these data types represents a fixed-sized hash value of 160, 256, 512, and 520 bits, respectively.
 
@@ -15,15 +15,15 @@ const HASH: H256 = h256!("0x1234567890abcdef1234567890abcdef1234567890abcdef1234
 ```
 
 In this example, we create a const hash value of type `H256` using the `h256!` macro. The resulting hash value is assigned to the `HASH` constant. The hash value is represented as a hexadecimal string.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-   
+
    This code provides fixed-sized hash data types and their static constructors for use in Rust programs.
 
 2. What are the available hash data types?
-   
+
    The available hash data types are `H160`, `H256`, `H512`, and `H520`.
 
 3. What are the macros used to create a const hash value from a hexadecimal string?
-   
+
    The macros used to create a const hash value from a hexadecimal string are `h160!`, `h256!`, `h512!`, and `h520!`.

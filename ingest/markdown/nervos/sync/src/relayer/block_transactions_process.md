@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/relayer/block_transactions_process.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/relayer/block_transactions_process.rs)
 
 The `BlockTransactionsProcess` struct is responsible for processing incoming `BlockTransactions` messages from peers in the CKB network. The purpose of this code is to verify the transactions in the message and reconstruct the full block if all transactions are present. If not all transactions are present, the code requests the missing transactions from the peer.
 
@@ -11,7 +11,7 @@ If not all expected transactions and uncles are present in the message, the meth
 If the block hash of the received transactions does not match the hash of a pending compact block, the method returns an `ignored` status code.
 
 Overall, this code is an important part of the CKB network's block propagation mechanism. It ensures that all transactions in a block are verified and that missing transactions are requested from peers. This helps to maintain the integrity of the blockchain and ensure that all nodes have the same view of the network.
-## Questions: 
+## Questions:
  1. What is the purpose of the `BlockTransactionsProcess` struct and its `execute` method?
 - The `BlockTransactionsProcess` struct is responsible for processing block transactions received from a peer, and its `execute` method executes this processing logic and returns a `Status` indicating success or failure.
 

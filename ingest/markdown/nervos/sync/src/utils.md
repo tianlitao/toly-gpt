@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/utils.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/utils.rs)
 
 The code provided is a Rust module that contains several utility functions for sending network messages in the CKB (Nervos Common Knowledge Base) project. The module is part of the CKB networking library and is used to send messages between nodes in the CKB network.
 
@@ -13,7 +13,7 @@ The `protocol_name` function returns the name of the protocol associated with th
 The `is_internal_db_error` function is a utility function that checks whether a given error is an internal database error. If the error is an internal database error, the function returns `true`. Otherwise, it returns `false`. This function is used to handle errors that occur when interacting with the CKB database.
 
 Overall, this module provides several utility functions that are used to send messages over the CKB network and log metrics about the size of those messages. These functions are used throughout the CKB networking library to facilitate communication between nodes in the CKB network.
-## Questions: 
+## Questions:
  1. What is the purpose of the `send_message` and `send_message_to` functions?
 - The `send_message` function sends a network message into a specified protocol connection, while the `send_message_to` function sends a network message into the current protocol connection.
 2. What is the purpose of the `metric_ckb_message_bytes` function?

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/fuzz/programs/exec_caller.c)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/fuzz/programs/exec_caller.c)
 
 The code is a part of the ckb project and is written in C language. The purpose of this code is to execute a system call to interact with the operating system. The code defines a function `__internal_syscall` that takes seven arguments, including the system call number and six registers. The function uses inline assembly to execute the system call using the `scall` instruction. The function returns the value of the first register after the system call.
 
@@ -11,7 +11,7 @@ The function then parses the data in the buffer to extract the callee informatio
 Finally, the function calls another system call with the extracted information. The system call number is 2043, which is used to execute a script. The arguments to the system call include the callee's source, offset, length, number of arguments, and the arguments themselves.
 
 Overall, this code is a low-level interface to execute system calls and interact with the operating system. It is used by other parts of the ckb project to execute scripts and read data from the current process's memory.
-## Questions: 
+## Questions:
  1. What is the purpose of the `__internal_syscall` function and how is it used?
    - The `__internal_syscall` function is used to make a system call with the given arguments and return the result. It is used by the `syscall` macro to simplify the system call interface.
 

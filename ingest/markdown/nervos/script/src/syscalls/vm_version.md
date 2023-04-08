@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/syscalls/vm_version.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/syscalls/vm_version.rs)
 
 This code defines a struct called `VMVersion` that implements the `Syscalls` trait for a CKB virtual machine. The purpose of this code is to provide a system call that returns the version of the virtual machine.
 
@@ -20,7 +20,7 @@ if version >= 100 {
     // Do something that works with older versions
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code implements a syscall for retrieving the version of the CKB VM. It is part of the ckb_vm module within the larger ckb project.
 

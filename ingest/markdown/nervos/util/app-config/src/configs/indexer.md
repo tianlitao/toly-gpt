@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/indexer.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/indexer.rs)
 
 The code defines a struct `IndexerConfig` that holds configuration options for an indexer. The struct has several fields, including `store`, `secondary_path`, `poll_interval`, `index_tx_pool`, `block_filter`, `cell_filter`, `db_background_jobs`, and `db_keep_log_file_num`. These fields are used to configure the indexer's behavior, such as where to store the index, how often to poll for new blocks, and whether to index transactions in the CKB transaction pool.
 
@@ -15,7 +15,7 @@ config.index_tx_pool = true;
 config.adjust(Path::new("/root/dir"), "indexer");
 let indexer = Indexer::new(config);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `IndexerConfig` struct?
 - The `IndexerConfig` struct is used to store configuration options for the indexer.
 

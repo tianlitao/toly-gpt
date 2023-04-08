@@ -1,12 +1,12 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/syscalls/pause.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/syscalls/pause.rs)
 
-The code defines a struct called `Pause` that implements the `Syscalls` trait from the `ckb_vm` crate. The purpose of this code is to provide a system call that can be used to pause execution of a CKB (Nervos Network) VM. 
+The code defines a struct called `Pause` that implements the `Syscalls` trait from the `ckb_vm` crate. The purpose of this code is to provide a system call that can be used to pause execution of a CKB (Nervos Network) VM.
 
-The `Pause` struct takes an `Arc<AtomicBool>` as a parameter in its constructor. This is used to determine whether or not to skip the pause. If the `AtomicBool` is set to `true`, the pause is skipped. Otherwise, an error is returned indicating that the maximum number of cycles has been exceeded. 
+The `Pause` struct takes an `Arc<AtomicBool>` as a parameter in its constructor. This is used to determine whether or not to skip the pause. If the `AtomicBool` is set to `true`, the pause is skipped. Otherwise, an error is returned indicating that the maximum number of cycles has been exceeded.
 
-The `initialize` method is a no-op and simply returns `Ok(())`. The `ecall` method is where the actual pause logic is implemented. It first checks if the system call number in register `A7` is equal to `DEBUG_PAUSE`. If it is not, it returns `Ok(false)` indicating that the system call was not handled. If it is, it checks the value of the `skip` flag. If it is set to `true`, it returns `Ok(true)` indicating that the pause was skipped. Otherwise, it returns an error indicating that the maximum number of cycles has been exceeded. 
+The `initialize` method is a no-op and simply returns `Ok(())`. The `ecall` method is where the actual pause logic is implemented. It first checks if the system call number in register `A7` is equal to `DEBUG_PAUSE`. If it is not, it returns `Ok(false)` indicating that the system call was not handled. If it is, it checks the value of the `skip` flag. If it is set to `true`, it returns `Ok(true)` indicating that the pause was skipped. Otherwise, it returns an error indicating that the maximum number of cycles has been exceeded.
 
-This code can be used in the larger CKB project to provide a way to pause execution of a VM for debugging purposes. By setting the `skip` flag to `true`, the pause can be skipped entirely, allowing for uninterrupted execution. This can be useful when debugging complex smart contracts or other code running on the CKB network. 
+This code can be used in the larger CKB project to provide a way to pause execution of a VM for debugging purposes. By setting the `skip` flag to `true`, the pause can be skipped entirely, allowing for uninterrupted execution. This can be useful when debugging complex smart contracts or other code running on the CKB network.
 
 Example usage:
 
@@ -36,7 +36,7 @@ fn main() {
     }
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code defines a struct called `Pause` that implements the `Syscalls` trait for a CKB virtual machine. It allows for pausing execution of the virtual machine for debugging purposes. It is likely used as part of the larger CKB blockchain project.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/miner/src/worker/dummy.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/miner/src/worker/dummy.rs)
 
 The `Dummy` struct and its associated methods are used to simulate the mining process in the CKB (Nervos Common Knowledge Base) blockchain. The `Dummy` struct implements the `Worker` trait, which is used to run the mining process. The `Worker` trait is defined in the `ckb-miner` crate, which is a dependency of the `ckb` project.
 
@@ -15,9 +15,9 @@ The `solve` method is used to simulate the mining process. It takes a `pow_hash`
 The `run` method is used to run the mining process. It takes a closure `G` that generates a random number and a `ProgressBar` object. The `run` method loops indefinitely, polling the `worker_rx` channel for messages and checking the `start` field to determine whether to continue mining. If the `start` field is true and there is new work to be done, the `solve` method is called to simulate the mining process.
 
 Overall, the `Dummy` struct and its associated methods are used to simulate the mining process in the CKB blockchain. The `Dummy` struct is used in the larger `ckb` project to test the mining process and ensure that it is working correctly.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Dummy` struct and how does it relate to the rest of the `ckb` project?
-- The `Dummy` struct is a worker implementation that simulates mining for the `ckb` project. It receives work from the `WorkerMessage` channel and solves it using a delay specified by the `Delay` enum. It then sends the solution to the `nonce_tx` channel. 
+- The `Dummy` struct is a worker implementation that simulates mining for the `ckb` project. It receives work from the `WorkerMessage` channel and solves it using a delay specified by the `Delay` enum. It then sends the solution to the `nonce_tx` channel.
 
 2. What is the purpose of the `Delay` enum and how is it used in the `Dummy` struct?
 - The `Delay` enum represents different types of delays that can be used in the `Dummy` struct. It is used to determine how long the `Dummy` struct should wait before solving a given piece of work. The `duration` method of the `Delay` enum returns a `Duration` object representing the length of the delay.

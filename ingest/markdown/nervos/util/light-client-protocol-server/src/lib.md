@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/light-client-protocol-server/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/light-client-protocol-server/src/lib.rs)
 
 The `LightClientProtocol` module is a server-side implementation for the CKB (Nervos Common Knowledge Base) light client protocol. The module provides a protocol handler for the CKB network, which allows peers to communicate with each other using the CKB light client protocol. The module is used in the larger CKB project to enable light clients to interact with the CKB network.
 
@@ -9,7 +9,7 @@ The `CKBProtocolHandler` trait is implemented for the `LightClientProtocol` stru
 The `LightClientProtocol` struct also contains several utility methods for generating and replying with protocol messages. The `get_verifiable_tip_header` method generates a `VerifiableHeader` object for the current tip block of the active chain. The `reply_tip_state` method sends a `LightClientMessage` containing the `VerifiableHeader` object to a specified peer. The `reply_proof` method generates a proof for a specified set of items in the MMR (Modified Merkle Mountain Range) and sends a `LightClientMessage` containing the proof to a specified peer.
 
 Overall, the `LightClientProtocol` module provides a protocol handler for the CKB light client protocol, which enables light clients to interact with the CKB network. The module is used in the larger CKB project to provide light client functionality.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what problem does it solve?
 - This code is the server-side implementation for CKB light client protocol, which is used to enable light clients to verify transactions and blocks without downloading the entire blockchain. It solves the problem of scalability and storage requirements for light clients.
 

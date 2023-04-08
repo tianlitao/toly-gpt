@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/rpc/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/rpc/src/lib.rs)
 
 This code is a module that provides Remote Procedure Call (RPC) functionality for the ckb project. RPC is a protocol that allows a program to request a service from another program on a different computer without having to understand the network details. The purpose of this module is to provide a way for other parts of the ckb project to communicate with each other using RPC.
 
@@ -13,7 +13,7 @@ The module exports three items: `RPCError`, `RpcServer`, and `ServiceBuilder`. `
 The `IoHandler` type is a type alias for the `PubSubHandler` type from the `jsonrpc_pubsub` crate. This type is used to handle incoming RPC requests and dispatch them to the appropriate RPC method.
 
 Overall, this module provides a way for other parts of the ckb project to communicate with each other using RPC. It provides a set of RPC methods that can be called, and it handles the details of the RPC protocol so that other parts of the project don't have to.
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
     - This code file contains module imports and re-exports for the ckb project's RPC server implementation.
 

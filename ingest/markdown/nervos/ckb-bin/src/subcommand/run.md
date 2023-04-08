@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/run.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/run.rs)
 
 The `run` function in this code file is the entry point for running the CKB (Nervos Common Knowledge Base) node. It takes in three arguments: `args`, `version`, and `async_handle`. The `args` argument is of type `RunArgs` and contains the configuration options for running the node. The `version` argument is of type `Version` and contains the version information for the node. The `async_handle` argument is of type `Handle` and is used for asynchronous programming.
 
@@ -19,15 +19,15 @@ The function starts the network and RPC (Remote Procedure Call) server using the
 Finally, the function saves the transaction pool, drops the network and chain controllers, and returns `Ok(())`.
 
 Overall, this code file is responsible for starting and managing the various components of the CKB node, including the chain service, network, and transaction pool. It also initializes the system cell cache and the global thread pool for Rayon.
-## Questions: 
+## Questions:
  1. What is the purpose of the `deadlock_detection` function call at the beginning of the `run` function?
-   
+
    The `deadlock_detection` function call is likely used to detect and prevent deadlocks in the code.
 
 2. What is the role of the `Launcher` struct in this code, and how is it initialized?
-   
+
    The `Launcher` struct is used to start and manage various components of the CKB node, such as the chain service, network and RPC servers, and transaction pool. It is initialized with the `new` method, which takes in various arguments including `RunArgs`, `Version`, and `Handle`.
 
 3. What is the purpose of the `rayon` thread pool in this code, and how is it initialized?
-   
+
    The `rayon` thread pool is used to parallelize certain operations in the code. It is initialized with the `ThreadPoolBuilder` struct, which sets the thread name and builds the global thread pool for `rayon`.

@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/indexer/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/indexer/src/lib.rs)
 
-The code above is a module that contains the built-in indexer for the ckb project. The indexer is responsible for indexing data related to transactions and blocks in the blockchain. This module creates secondary database instances that share data with the ckb node. 
+The code above is a module that contains the built-in indexer for the ckb project. The indexer is responsible for indexing data related to transactions and blocks in the blockchain. This module creates secondary database instances that share data with the ckb node.
 
 The `error` module contains error types that may occur during the indexing process. The `indexer` module contains the implementation of the indexer itself, which is responsible for indexing transactions and blocks. The `pool` module contains a transaction pool that is used by the indexer to keep track of unconfirmed transactions. The `store` module contains the implementation of the database used by the indexer to store indexed data.
 
@@ -20,12 +20,12 @@ println!("Block number: {}", block_info.number);
 ```
 
 In this example, we create a new `IndexerHandle` and use it to retrieve information about a block with the given hash. We then print the block number to the console.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb` project's built-in indexer?
    - The built-in indexer is used to share data with the ckb node by creating secondary db instances.
-   
+
 2. What are the different modules included in the `ckb` project's indexer?
    - The `ckb` project's indexer includes four modules: `error`, `indexer`, `pool`, and `store`.
-   
+
 3. What is included in the `service` module of the `ckb` project's indexer?
    - The `service` module includes the `IndexerHandle` and `IndexerService` structs, which are used to provide the indexer service.

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/db/src/transaction.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/db/src/transaction.rs)
 
 The `RocksDBTransaction` module provides an optimistic transaction wrapper for RocksDB. It is used to perform read and write operations on a RocksDB database with transactional semantics. The module provides a set of methods to read, write, and delete data from the database, as well as to commit or rollback transactions.
 
@@ -34,7 +34,7 @@ let key = b"key"; // specify the key
 let value = tx.get_pinned(col, key)?; // read the key-value pair from the database
 tx.rollback()?; // rollback the transaction
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what problem does it solve?
 - This code provides an optimistic transaction wrapper for RocksDB, which allows for atomicity and consistency in database operations even in the presence of concurrent transactions.
 

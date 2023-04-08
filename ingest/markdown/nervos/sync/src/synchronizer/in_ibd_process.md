@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/synchronizer/in_ibd_process.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/synchronizer/in_ibd_process.rs)
 
 The code defines a struct called `InIBDProcess` that is used to handle a specific process related to the Initial Block Download (IBD) phase of the CKB blockchain synchronization process. The `InIBDProcess` struct has three fields: a reference to a `Synchronizer` instance, a `PeerIndex` identifier, and a reference to a `CKBProtocolContext` trait object.
 
@@ -7,7 +7,7 @@ The `InIBDProcess` struct has an associated implementation that defines two meth
 The purpose of this code is to handle the specific case where a peer is in the IBD phase of synchronization. During this phase, the node needs to ensure that the peer is a valid connection and that it is not a malicious node attempting to disrupt the synchronization process. The `InIBDProcess` struct handles this by suspending synchronization with the peer if it is not a whitelisted outbound connection, or if it is an inbound connection. This ensures that the node only synchronizes with valid peers during the IBD phase.
 
 This code is likely used as part of a larger synchronization process in the CKB blockchain project. It is called when a node is processing an IBD peer, and it suspends synchronization with the peer if necessary. Other parts of the synchronization process likely handle other aspects of the synchronization, such as downloading and verifying blocks and transactions.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code is part of the ckb project and is related to synchronizing headers with peers during the initial block download (IBD) process.
 2. What is the role of the `Synchronizer` struct and how is it used in this code?

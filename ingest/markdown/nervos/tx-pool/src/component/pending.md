@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/tx-pool/src/component/pending.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/tx-pool/src/component/pending.rs)
 
 The `PendingQueue` struct is a data structure used to manage transactions that are currently in the transaction pool of the CKB (Nervos Common Knowledge Base) blockchain. It contains several maps that store information about the transactions, such as their inputs, outputs, and dependencies.
 
@@ -13,7 +13,7 @@ The `fill_proposals` method is used to fill a set of proposal transactions. This
 Finally, the `CellProvider` and `CellChecker` traits are implemented for the `PendingQueue` struct. These traits are used to provide information about cells (i.e. transaction outputs) to other parts of the CKB codebase. The `cell` method of the `CellProvider` trait is used to retrieve information about a cell given its outpoint, while the `is_live` method of the `CellChecker` trait is used to check if a cell is still live (i.e. has not been spent).
 
 Overall, the `PendingQueue` struct is an important part of the CKB transaction pool, and is used to manage transactions that are waiting to be included in a block. Its various methods and maps allow for efficient querying and manipulation of the transactions in the pool.
-## Questions: 
+## Questions:
  1. What is the purpose of the `PendingQueue` struct?
 - The `PendingQueue` struct represents a queue of transactions that are currently in the mempool waiting to be included in a block.
 

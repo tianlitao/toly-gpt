@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/src/linked_hash_set.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/src/linked_hash_set.rs)
 
 The code defines a `LinkedHashSet` struct, which is a wrapper around a `LinkedHashMap` from the `linked_hash_map` crate. The `LinkedHashSet` holds values in insertion order, which is not guaranteed by the standard `HashSet`. The `LinkedHashSet` struct has methods for inserting, checking for the presence of, and removing elements, as well as iterating over the elements in insertion order. It also has a method for computing the difference between two `LinkedHashSet` instances.
 
@@ -17,7 +17,7 @@ The `Iter` struct is a wrapper around the `Keys` iterator of the underlying `Lin
 The `Difference` struct is an iterator over the elements that are in one set but not the other. It is constructed by calling the `difference()` method on one set and passing in another set. It implements the `Iterator` trait, allowing it to be used in for loops and other iterator contexts.
 
 The code includes examples of how to use the `LinkedHashSet` struct, including creating a new set, inserting elements, iterating over the elements, and computing the difference between two sets.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how is it used?
 - This code provides a `HashSet` wrapper that holds values in insertion order. It can be used to create a `LinkedHashSet` and perform operations such as inserting values, checking if a value is present, getting the number of elements, getting an iterator of all elements in insertion order, and finding the difference between two sets.
 

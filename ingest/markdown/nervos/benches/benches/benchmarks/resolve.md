@@ -1,14 +1,14 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/benches/benches/benchmarks/resolve.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/benches/benches/benchmarks/resolve.rs)
 
-The code provided is a benchmarking tool for measuring the performance of the `resolve_transaction` and `check` functions in the `ckb_chain` module of the `ckb` project. 
+The code provided is a benchmarking tool for measuring the performance of the `resolve_transaction` and `check` functions in the `ckb_chain` module of the `ckb` project.
 
-The `resolve_transaction` function takes a transaction and a set of previously seen inputs, and returns a resolved transaction with all inputs resolved to their corresponding outputs. The `check` function takes a resolved transaction and a set of previously seen inputs, and checks that the transaction is valid according to the current chain state. 
+The `resolve_transaction` function takes a transaction and a set of previously seen inputs, and returns a resolved transaction with all inputs resolved to their corresponding outputs. The `check` function takes a resolved transaction and a set of previously seen inputs, and checks that the transaction is valid according to the current chain state.
 
-The benchmarking tool sets up a `ckb` chain with a specified number of transactions, each containing an output cell with a capacity of 100,000 CKB and a lock script that matches a predefined script. The tool then generates a set of transactions by spending the output cells of the genesis block's transaction and the proposal transaction of the previous block. The generated transactions are then used to repeatedly call the `resolve_transaction` and `check` functions, with the number of iterations specified by the benchmark input. 
+The benchmarking tool sets up a `ckb` chain with a specified number of transactions, each containing an output cell with a capacity of 100,000 CKB and a lock script that matches a predefined script. The tool then generates a set of transactions by spending the output cells of the genesis block's transaction and the proposal transaction of the previous block. The generated transactions are then used to repeatedly call the `resolve_transaction` and `check` functions, with the number of iterations specified by the benchmark input.
 
-The purpose of this benchmarking tool is to measure the performance of the `resolve_transaction` and `check` functions under different conditions, such as different numbers of transactions and different chain states. This information can be used to optimize the performance of the `ckb` chain and improve its overall efficiency. 
+The purpose of this benchmarking tool is to measure the performance of the `resolve_transaction` and `check` functions under different conditions, such as different numbers of transactions and different chain states. This information can be used to optimize the performance of the `ckb` chain and improve its overall efficiency.
 
-Example usage of the benchmarking tool: 
+Example usage of the benchmarking tool:
 
 ```rust
 use criterion::Criterion;
@@ -20,7 +20,7 @@ fn main() {
     criterion.final_summary();
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `setup_chain` function?
 - The `setup_chain` function sets up a new blockchain with a specified number of transactions and returns a shared instance and a chain controller.
 

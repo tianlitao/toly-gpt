@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/freezer/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/freezer/src/lib.rs)
 
-The code defines a module called `ckb` that contains two sub-modules `freezer` and `freezer_files`, as well as a test module. The purpose of this module is to provide an implementation of a memory-mapped append-only database for storing immutable chain data into flat files. 
+The code defines a module called `ckb` that contains two sub-modules `freezer` and `freezer_files`, as well as a test module. The purpose of this module is to provide an implementation of a memory-mapped append-only database for storing immutable chain data into flat files.
 
 The `Freezer` struct is the main component of this module and is exposed for use by other parts of the project. It is responsible for managing the memory-mapped files and providing an interface for reading and writing data to them. The `FreezerFilesBuilder` struct is used to create new instances of the `Freezer` struct with specific configuration options.
 
@@ -21,10 +21,10 @@ let offset = freezer.write(&data).unwrap();
 let read_data = freezer.read(offset, data.len()).unwrap();
 assert_eq!(data, read_data);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `Freezer` and `FreezerFilesBuilder` structs?
 - The `Freezer` struct is a memory mapped append-only database used to store immutable chain data into flat files, while the `FreezerFilesBuilder` struct is used to build and configure the `Freezer` database.
- 
+
 2. What is the `internal_error` function used for?
 - The `internal_error` function is used to create an `Error` instance with an `InternalErrorKind` of `Database` and a custom error message.
 

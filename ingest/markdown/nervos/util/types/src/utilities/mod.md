@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/utilities/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/utilities/mod.rs)
 
 This file contains utility functions and modules related to types used in the ckb project. The purpose of this code is to provide functionality for building and manipulating data structures used in the project.
 
@@ -13,12 +13,12 @@ The `merkle_tree` module provides functions for building and manipulating Merkle
 This file also exports all of the functions and types defined in the above modules for use in other parts of the project. For example, the `compact_to_difficulty` function can be used to convert a compact difficulty representation to a difficulty value in other parts of the project.
 
 Overall, this file provides essential utility functions and modules for building and manipulating data structures used in the ckb project.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb` project?
-- The purpose of the `ckb` project is not clear from this code file alone. 
+- The purpose of the `ckb` project is not clear from this code file alone.
 
 2. What is the functionality of the `merkle_mountain_range` module?
-- The functionality of the `merkle_mountain_range` module is not described in this code file. 
+- The functionality of the `merkle_mountain_range` module is not described in this code file.
 
 3. What is the significance of the constants `DIFF_TWO` and `CBMT`?
 - `DIFF_TWO` is a constant used in the `difficulty` module to represent a difficulty of 2. `CBMT` is an abbreviation for "compact binary merkle tree" and is used in the `merkle_tree` module.

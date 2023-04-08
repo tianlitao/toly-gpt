@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/peer_store/ban_list.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/peer_store/ban_list.rs)
 
-The `BanList` module provides functionality for managing a list of banned IP addresses. It is used in the larger project to prevent certain IP addresses from connecting to the network. 
+The `BanList` module provides functionality for managing a list of banned IP addresses. It is used in the larger project to prevent certain IP addresses from connecting to the network.
 
 The `BanList` struct contains a `HashMap` that maps `IpNetwork` to `BannedAddr`. The `insert_count` field is used to keep track of the number of times an IP address has been added to the list. When `insert_count` is a multiple of `CLEAR_INTERVAL_COUNTER`, the `clear_expires` method is called to remove any expired bans from the list.
 
@@ -32,7 +32,7 @@ fn main() {
     assert!(!ban_list.is_ip_banned(&ip_addr));
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code implements a ban list for IP addresses and is part of the peer store module in the ckb project, which manages peer connections and data exchange.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/types/header_map/memory.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/types/header_map/memory.rs)
 
 The `MemoryMap` struct is defined in this code file. It is used to store a map of `HeaderView` structs, which represent block headers in the CKB blockchain. The map is implemented as a `LinkedHashMap` wrapped in a `RwLock` to allow for concurrent read and write access.
 
@@ -23,7 +23,7 @@ if memory_map.contains_key(&block_hash) {
     // Header not found in memory map, read from disk...
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `MemoryMap` struct and what data does it store?
 - The `MemoryMap` struct is used to store a map of `Byte32` keys to `HeaderView` values. It is used to cache headers in memory for faster access.
 

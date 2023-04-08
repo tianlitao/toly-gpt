@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/rpc/src/util/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/rpc/src/util/mod.rs)
 
-This code is a module that handles the fee rate for transactions in the ckb project. The purpose of this module is to provide a way to collect and provide fee rates for transactions in the larger ckb project. 
+This code is a module that handles the fee rate for transactions in the ckb project. The purpose of this module is to provide a way to collect and provide fee rates for transactions in the larger ckb project.
 
 The `fee_rate` module contains two items: `FeeRateCollector` and `FeeRateProvider`. The `FeeRateCollector` is used to collect fee rates from various sources, such as the network or user input. The `FeeRateProvider` is used to provide fee rates to other parts of the ckb project, such as the transaction pool or the miner.
 
@@ -13,7 +13,7 @@ The `use` keyword is used to bring the `FeeRateCollector` and `FeeRateProvider` 
 The `#[cfg(test)]` attribute is used to conditionally compile the `FeeRateProvider` item only when running tests. This is a way to ensure that the `FeeRateProvider` is not used in production code, but only in testing.
 
 Overall, this module provides a way to handle fee rates for transactions in the ckb project. It allows for the collection and provision of fee rates, which is an important aspect of transaction processing.
-## Questions: 
+## Questions:
  1. What is the purpose of the `fee_rate` module and how is it used in the `ckb` project?
    - The `fee_rate` module is used to collect and provide fee rate information in the `ckb` project, and it is accessed through the `FeeRateCollector` and `FeeRateProvider` structs.
 2. Why is the `fee_rate` module marked as `pub(crate)` and what does this mean?

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/indexer/src/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/indexer/src/error.rs)
 
 The code above defines an error type for the Indexer module in the larger project. The purpose of this code is to provide a way to handle errors that may occur during the execution of the Indexer module. The `Error` type is defined using the `thiserror` crate, which allows for easy creation of custom error types with additional information.
 
@@ -18,7 +18,7 @@ fn my_indexer_function() -> Result<(), Error> {
     Err(Error::invalid_params("Invalid parameter"))
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code defines an error type for the Indexer and specifies two categories of errors: DB errors and invalid params errors.
 

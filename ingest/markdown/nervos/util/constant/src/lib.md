@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/constant/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/constant/src/lib.rs)
 
 The code above defines a module called `constants` that collects various constants used across different components of the ckb project. The `ckb` project is a blockchain implementation that aims to provide a secure, decentralized, and scalable infrastructure for building decentralized applications.
 
@@ -13,7 +13,7 @@ The `store` sub-module contains constants related to the storage layer of the ck
 The `sync` sub-module contains constants related to the synchronization process of the ckb blockchain. These constants define the behavior of the synchronization protocol used to ensure that all nodes on the network have the same copy of the blockchain. For example, the `sync::MAX_HEADERS_PER_FETCH` constant defines the maximum number of block headers that can be fetched in a single request during the synchronization process.
 
 Overall, the `constants` module provides a centralized location for storing and accessing various constants used across different components of the ckb project. This makes it easier to maintain and update the project as new features are added and the consensus rules evolve over time.
-## Questions: 
+## Questions:
  1. What is the purpose of this file and its modules?
    - This file collects constants used across ckb components and contains modules for consensus, hardfork, store, and sync constants.
 2. What kind of constants are included in each module?

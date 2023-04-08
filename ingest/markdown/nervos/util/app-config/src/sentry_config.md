@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/sentry_config.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/sentry_config.rs)
 
 The code defines a `SentryConfig` struct that is used to configure and initialize a Sentry client. Sentry is a tool used for error tracking and monitoring in software applications. The `SentryConfig` struct contains a `dsn` field that represents the Data Source Name for the Sentry client, an `org_ident` field that represents the organization identifier, and an `org_contact` field that represents the organization contact information.
 
@@ -11,7 +11,7 @@ The `SentryConfig` struct has a private method `build_sentry_client_options` tha
 The code also defines two static arrays of `Cow` objects, `DB_OPEN_FINGERPRINT` and `SQLITE_FINGERPRINT`, that are used to group events via fingerprint or ignore them. The `before_send` function takes an `Event` object as an argument and returns an `Option<Event>` object. The `before_send` function sets the thread name as an extra field in the `Event` object. It then checks the exception value of the `Event` object and sets the level and fingerprint fields based on the exception value. If the exception value matches certain patterns, the `before_send` function ignores the event.
 
 Overall, this code provides a way to configure and initialize a Sentry client for error tracking and monitoring in a software application. It also provides a way to group events via fingerprint or ignore them based on the exception value. This code can be used in the larger project to improve error tracking and monitoring. For example, it can be used to track errors in the CKB blockchain network.
-## Questions: 
+## Questions:
  1. What is the purpose of the `SentryConfig` struct and its methods?
 - The `SentryConfig` struct holds configuration information for the Sentry error tracking service, and its `init` method initializes a Sentry client with the provided configuration.
 2. What is the significance of the `before_send` function?

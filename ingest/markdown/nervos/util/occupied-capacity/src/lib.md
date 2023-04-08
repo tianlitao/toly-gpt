@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/occupied-capacity/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/occupied-capacity/src/lib.rs)
 
 The code above is a module that provides functionality for measuring the capacity of data structures. It is a part of the larger ckb project and is used to calculate the amount of space occupied by data structures in the project.
 
@@ -16,7 +16,7 @@ let capacity = capacity_bytes!(bytes);
 ```
 
 Overall, this module provides essential functionality for measuring the capacity of data structures in the ckb project. It allows for efficient use of storage space and helps ensure that the project can scale effectively.
-## Questions: 
+## Questions:
  1. What is the purpose of this module and what does it measure?
    - This module measures data structure and its purpose is to provide capacity-related functionality.
 2. What are the dependencies of this module?

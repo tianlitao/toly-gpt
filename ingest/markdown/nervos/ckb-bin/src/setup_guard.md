@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/setup_guard.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/setup_guard.rs)
 
 The code defines a struct `SetupGuard` that is responsible for initializing and holding guards for various services used by the `ckb` project. The guards ensure that the services are properly initialized and cleaned up when they are no longer needed. The services include a logger service, a metrics service, and an optional Sentry service for error reporting.
 
@@ -31,15 +31,15 @@ drop(guard); // Clean up the services
 ```
 
 In summary, the `SetupGuard` struct and its `from_setup` method are important components of the `ckb` project that ensure the proper initialization and cleanup of various services used by the project.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what does it do?
-   
+
    This code initializes logging, metrics, and Sentry error reporting services for the ckb application based on the provided configuration and setup parameters.
 
 2. What is the significance of the `with_sentry` feature flag in this code?
-   
+
    The `with_sentry` feature flag determines whether or not to enable Sentry error reporting service. If enabled, the code initializes Sentry with the provided configuration and sets up a panic hook to send stack traces to Sentry on Rust panics.
 
 3. What is the purpose of the `SetupGuard` struct and how is it used?
-   
+
    The `SetupGuard` struct is used to manage the initialization and lifetime of the logging, metrics, and Sentry services. It is created from the provided `Setup` parameters and version information, and is used to ensure that these services are properly initialized and cleaned up during the execution of the ckb application.

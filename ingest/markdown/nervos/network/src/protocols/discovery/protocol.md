@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/protocols/discovery/protocol.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/protocols/discovery/protocol.rs)
 
 The code defines a set of functions and data structures for encoding and decoding messages used in the discovery protocol of the ckb project. The `DiscoveryMessage` enum represents two types of messages: `GetNodes` and `Nodes`. The former is used to request a list of nodes from other peers, while the latter is used to respond to such requests with a list of nodes. The `Nodes` struct contains a boolean flag indicating whether the nodes are being announced or not, and a vector of `Node` structs, each of which contains a vector of `Multiaddr` addresses and a set of `Flags`.
 
@@ -9,7 +9,7 @@ The encoding and decoding functions use the `packed` module from the `ckb_types`
 The `decode` function first tries to parse the input bytes as a `DiscoveryMessageReader`, and then matches on the type of the payload to extract the relevant fields. If the payload is a `GetNodes` message, it extracts the version, count, listen port, and required flags fields. If the payload is a `Nodes` message, it extracts the announce flag and a vector of `Node` objects, each of which contains a vector of `Multiaddr` addresses and a set of `Flags`.
 
 Overall, this code provides a way to encode and decode messages used in the discovery protocol of the ckb project. It can be used by other parts of the project to communicate with other peers and exchange information about available nodes. For example, a node might use the `encode` function to send a `GetNodes` message to a peer, and then use the `decode` function to parse the response and extract the list of available nodes.
-## Questions: 
+## Questions:
  1. What is the purpose of the `DiscoveryMessage` enum and its variants?
 - The `DiscoveryMessage` enum represents the different types of messages that can be sent in a discovery protocol. The `GetNodes` variant is used to request a list of nodes, while the `Nodes` variant is used to respond with a list of nodes.
 

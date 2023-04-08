@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/indexer/src/store/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/indexer/src/store/mod.rs)
 
 This code defines a trait and an enum that are used to interact with a key-value store. The key-value store can be implemented using RocksDB or a secondary database. The trait, called `Store`, defines methods for interacting with the key-value store, such as getting and setting values, checking if a key exists, and iterating over the keys and values. The trait also defines a method for creating a batch of operations that can be committed atomically. The `Batch` trait is used to define methods for adding, deleting, and committing a batch of operations.
 
@@ -25,7 +25,7 @@ let (key, value) = iter.next().unwrap();
 assert_eq!(key, b"key1");
 assert_eq!(value, b"value1");
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file defines traits and types for a key-value store, including methods for getting, putting, and deleting key-value pairs, as well as iterating over the store.
 

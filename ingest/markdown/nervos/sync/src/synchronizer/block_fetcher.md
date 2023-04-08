@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/synchronizer/block_fetcher.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/synchronizer/block_fetcher.rs)
 
 The `BlockFetcher` struct is responsible for fetching blocks from a peer during the block synchronization process. It is part of the larger `ckb` project, which is a cryptocurrency implementation based on the Nervos CKB blockchain.
 
@@ -15,7 +15,7 @@ The `update_last_common_header` method updates the last common header between th
 The `fetch` method fetches blocks from the peer. It first checks whether the number of blocks in-flight from the peer has reached the limit. If the limit has been reached, the method returns `None`. If the limit has not been reached, the method updates the best known header of the peer and checks whether the header of the block being fetched is on a better chain than the current active chain. If the header is not on a better chain, the method returns `None`. If the header is on a better chain, the method updates the last common header between the node and the peer and fetches blocks from the peer. The method returns a vector of vectors of block hashes.
 
 Overall, the `BlockFetcher` struct is an important component of the block synchronization process in the `ckb` project. It is used to fetch blocks from a peer and ensure that the node is synchronized with the rest of the network.
-## Questions: 
+## Questions:
  1. What is the purpose of the `BlockFetcher` struct and its associated methods?
 - The `BlockFetcher` struct is used to fetch blocks from peers during block synchronization. Its methods are used to determine which blocks to fetch and from which peers.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/network_group.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/network_group.rs)
 
 The code defines an enum called `Group` that represents different types of network groups. The `Group` enum has four variants: `None`, `LocalNetwork`, `IP4`, and `IP6`. The `None` variant is used when a network address cannot be grouped. The `LocalNetwork` variant is used when the network address is a loopback address. The `IP4` variant is used when the network address is an IPv4 address, and the `IP6` variant is used when the network address is an IPv6 address.
 
@@ -13,15 +13,15 @@ fn process_network_address(addr: &Multiaddr) -> Group {
     Group::from(addr)
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-   
+
    This code defines an enum called `Group` and implements a conversion from `Multiaddr` to `Group` based on the IP address contained in the `Multiaddr`.
 
 2. What is the significance of the `Group` enum variants?
-   
+
    The `Group` enum variants represent different groups of IP addresses based on their first two octets. The `None` variant is used when the IP address cannot be grouped.
 
 3. What is the purpose of the commented out code block?
-   
+
    The commented out code block is intended to handle global IP addresses, but it is currently disabled because the feature is not yet stable.

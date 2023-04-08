@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/core/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/core/error.rs)
 
 This code defines two error types related to transactions and out-points in the CKB (Nervos Common Knowledge Base) project. These errors are used to indicate various issues that may arise when validating transactions and their associated out-points.
 
@@ -9,7 +9,7 @@ The purpose of these error types is to provide a way to handle errors that may o
 These error types are used throughout the CKB project to validate transactions and out-points. For example, the `TransactionVerifier` struct uses these error types to validate transactions before they are added to the blockchain. The `OutPointResolver` struct uses the `OutPointError` type to handle errors related to out-points when resolving them during transaction validation.
 
 Overall, these error types are an important part of the CKB project's transaction validation process. They provide a way to handle errors that may occur during validation and provide more detailed information to users about why their transactions may have failed to validate.
-## Questions: 
+## Questions:
  1. What are the possible errors that can occur due to out-point rules not being respected?
 - The possible errors are: Dead, Unknown, OutOfOrder, InvalidDepGroup, InvalidHeader, and OverMaxDepExpansionLimit.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/jsonrpc-types/src/pool.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/jsonrpc-types/src/pool.rs)
 
 The code defines several structs and enums that are used to represent information about the transaction pool in the CKB project. The `TxPoolInfo` struct contains information about the current state of the transaction pool, including the associated chain tip block hash, the number of transactions in the pending and proposed states, the number of orphan transactions, the total count of transactions in the pool, and the total consumed VM cycles of all the transactions in the pool. It also includes information about the fee rate threshold, the last updated time, and the size limit of transactions in the pool.
 
@@ -7,7 +7,7 @@ The `PoolTransactionEntry` struct represents a transaction in the pool and inclu
 The `TxPoolEntries` struct contains verbose information about all transactions in the pool, including pending and proposed transactions, while the `RawTxPool` enum is equivalent to `TxPoolIds` or `TxPoolEntries` depending on whether verbose information is requested. Finally, the `PoolTransactionReject` enum represents a transaction reject message and includes information about the reason for the rejection, such as low fee rate, exceeded maximum ancestors count limit, or malformed transaction.
 
 Overall, this code provides a way to manage and monitor the transaction pool in the CKB project, including information about the current state of the pool, individual transactions in the pool, and reasons for transaction rejection. This information can be used to optimize transaction processing and ensure the integrity of the blockchain.
-## Questions: 
+## Questions:
  1. What information does the `TxPoolInfo` struct contain?
 - The `TxPoolInfo` struct contains information about the current state of the transaction pool, including the associated chain tip block hash, the number of transactions in the pending and proposed states, the count of orphan transactions, the total count of transactions in the pool, the total consumed VM cycles of all transactions in the pool, the fee rate threshold, the last updated time, and limits on transaction size and the size of the transaction pool.
 

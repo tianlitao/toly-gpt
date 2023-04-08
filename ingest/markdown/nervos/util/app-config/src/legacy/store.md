@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/legacy/store.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/legacy/store.rs)
 
 This code defines a struct called `StoreConfig` that holds configuration options for a store. The struct has several fields that determine the size of various caches used by the store, as well as whether a "freezer" feature is enabled. The struct is deserialized using the `serde` library, which allows it to be read from a configuration file or other data source.
 
@@ -9,7 +9,7 @@ The `StoreConfig` struct also has a field called `freezer_enable` that determine
 The `StoreConfig` struct has several methods defined on it. The `default` method returns a default configuration for the store, with all cache sizes set to reasonable values and the freezer feature disabled. The `into` method is used to convert a `StoreConfig` object into a `crate::StoreConfig` object, which is used elsewhere in the project.
 
 Overall, this code defines a configuration object for a store that is used to determine the size of various caches and whether a freezer feature is enabled. The `serde` library is used to deserialize the configuration object from a data source, and several methods are defined to provide default values and convert the object to other types.
-## Questions: 
+## Questions:
  1. What is the purpose of the `StoreConfig` struct and what are its fields used for?
 - The `StoreConfig` struct is used to configure various cache sizes and settings for the CKB storage subsystem. Its fields are used to specify the size of caches for different types of data, as well as settings for block extensions and the freezer.
 

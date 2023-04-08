@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/jsonrpc-types/src/subscription.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/jsonrpc-types/src/subscription.rs)
 
 This code defines an enum called `Topic` that specifies different types of topics that can be subscribed to as an active subscription. The enum is marked with the `#[derive]` attribute to automatically implement several traits, including `Debug`, `Clone`, `Copy`, `Serialize`, `Deserialize`, `PartialEq`, `Eq`, and `Hash`.
 
@@ -21,7 +21,7 @@ let topics = vec![Topic::NewTipHeader, Topic::NewTransaction];
 // Add these topics as an active subscription
 my_subscription.add_topics(topics);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
 - This code defines an enum called `Topic` which specifies different types of topics that can be subscribed to.
 

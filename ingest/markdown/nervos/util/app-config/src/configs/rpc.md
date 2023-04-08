@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/rpc.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/rpc.rs)
 
 The code defines two structs, `Module` and `Config`, that are used to configure and enable various modules for the ckb project's RPC server. The `Module` struct is an enum that lists all the available modules that can be enabled, such as `Net`, `Chain`, `Miner`, etc. The `Config` struct contains various configuration options for the RPC server, such as the listen addresses for the TCP and WS servers, the maximum request body size, the number of worker threads, and the list of enabled modules.
 
@@ -44,15 +44,15 @@ fn main() {
     }
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb_jsonrpc_types::Script` import and how is it used in this code?
-   
+
    The `ckb_jsonrpc_types::Script` import is used to define the `extra_well_known_lock_scripts` and `extra_well_known_type_scripts` fields in the `Config` struct, which allow for customized lock and type scripts to be used in the RPC server.
 
 2. What is the significance of the `#[serde(default)]` attribute used in some of the fields of the `Config` struct?
-   
+
    The `#[serde(default)]` attribute specifies that if a field is missing from the input when deserializing the `Config` struct, it should be set to its default value instead of causing a deserialization error.
 
 3. How are the `Config` struct's `*_enable` methods used in the context of the `Module` enum?
-   
+
    The `*_enable` methods are used to check whether a particular `Module` is enabled in the `Config` struct's `modules` field. This allows for conditional behavior based on which modules are enabled in the RPC server.

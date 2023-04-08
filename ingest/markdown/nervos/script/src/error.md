@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/error.rs)
 
 This code defines error types and helper functions for script execution in the CKB blockchain. The `ScriptError` enum defines various types of errors that can occur during script execution, such as script not found, exceeded maximum cycles, multiple matches, validation failure, and so on. The `TransactionScriptErrorSource` enum defines the source of the error, which can be either an input or an output of a transaction, along with the index and the type of the script group. The `TransactionScriptError` struct combines the error source and the cause of the error, which is an instance of `ScriptError`.
 
@@ -26,7 +26,7 @@ fn execute_script(script: &Script) -> Result<(), ScriptError> {
 ```
 
 In this example, the `execute_script` function executes a script and returns an error if the script fails. If the script returns an exit code of 1, a validation failure error is created using the `validation_failure` function. This error is then wrapped in a transaction script error with the input lock script at index 0, and thrown as an `Error` instance using the `into` function.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ScriptError` enum and what are some of its variants?
 - The `ScriptError` enum represents errors that can occur during script execution and includes variants for different types of errors such as script not found, exceeded maximum cycles, multiple matches, validation failure, and more.
 

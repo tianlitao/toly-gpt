@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/fixed-hash/core/src/std_convert.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/fixed-hash/core/src/std_convert.rs)
 
 This code defines a macro called `impl_std_convert` that generates implementations of the `AsRef`, `AsMut`, `From` and `Into` traits for four different types: `H160`, `H256`, `H512` and `H520`. These types represent fixed-size byte arrays of 20, 32, 64 and 65 bytes respectively, and are used extensively throughout the ckb project to represent cryptographic hashes and addresses.
 
@@ -23,7 +23,7 @@ fn main() {
 ```
 
 In this example, we create a `H256` hash with all zeroes, and then convert it to a `H160` address using the `From` trait. We then pass the address to a function that expects a reference to a `H160` value, and print it out in hexadecimal format. The `impl_std_convert` macro allows us to perform these conversions easily and efficiently.
-## Questions: 
+## Questions:
  1. What is the purpose of the `impl_std_convert` macro and how is it used in this code?
    - The `impl_std_convert` macro is used to implement the `AsRef`, `AsMut`, `From` traits for types `H160`, `H256`, `H512`, and `H520`. It allows these types to be converted to and from byte arrays of specific sizes.
 2. What are the sizes of the byte arrays that the `H160`, `H256`, `H512`, and `H520` types can be converted to and from?

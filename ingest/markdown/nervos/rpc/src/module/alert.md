@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/rpc/src/module/alert.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/rpc/src/module/alert.rs)
 
 The `AlertRpc` module is responsible for handling network alerts in the CKB project. Alerts are messages about critical problems that are broadcast to all nodes via the peer-to-peer (p2p) network. This module defines an RPC interface for sending alerts to the network.
 
@@ -9,7 +9,7 @@ The `AlertRpcImpl` struct implements the `AlertRpc` trait and provides an implem
 The `send_alert` method first converts the `Alert` object into a packed `Alert` object. It then checks that the notice period is in the future. If the notice period is in the past, an error is returned. The method then verifies the signatures on the alert using the `verifier` field. If the signatures are valid, the alert is added to the `notifier` field and broadcast to the p2p network using the `network_controller` field. If the broadcast fails, an error is returned.
 
 Overall, the `AlertRpc` module provides a way to send network alerts to all nodes in the CKB network. This is an important feature for communicating critical problems to all nodes in a timely manner. The `AlertRpc` module is used in the larger CKB project to ensure the health and security of the network.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what problem does it solve?
 - This code implements an RPC module for network alerts in the ckb project. It allows nodes to broadcast critical problems to all other nodes via the p2p network.
 

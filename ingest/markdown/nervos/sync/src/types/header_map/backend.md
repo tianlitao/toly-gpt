@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/types/header_map/backend.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/types/header_map/backend.rs)
 
 This code defines a trait called `KeyValueBackend` which is used as an interface for key-value storage backends in the ckb project. The purpose of this trait is to provide a common set of methods that can be implemented by different storage backends, allowing them to be used interchangeably in the larger project.
 
@@ -18,7 +18,7 @@ let key = Byte32::zero();
 let value = HeaderView::default();
 store.insert(&value);
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code and what does it do?
    This code defines a trait called `KeyValueBackend` which has methods for interacting with a key-value store. It is used in the `ckb` project for storing and retrieving data.
 

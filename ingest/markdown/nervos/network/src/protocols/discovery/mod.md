@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/protocols/discovery/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/protocols/discovery/mod.rs)
 
 The `DiscoveryProtocol` module is responsible for discovering new nodes in the network and sharing known nodes with other peers. It implements the `ServiceProtocol` trait, which defines the behavior of a protocol that can be used as a service in the CKB network.
 
@@ -9,7 +9,7 @@ The `DiscoveryProtocol` struct implements the `ServiceProtocol` trait, which def
 The module also defines several constants that are used by the protocol, such as the maximum number of new addresses to accumulate before announcing, the maximum number of addresses in one `Nodes` item, and the interval at which to send an announce nodes message.
 
 Overall, the `DiscoveryProtocol` module is an important part of the CKB network that enables nodes to discover and share information about other nodes in the network. It is used by other modules in the project to establish and maintain connections with other peers.
-## Questions: 
+## Questions:
  1. What is the purpose of the `DiscoveryProtocol` and how does it work?
 - The `DiscoveryProtocol` is responsible for discovering and sharing network addresses with other peers in the network. It sends and receives messages containing lists of network addresses and manages a list of known addresses for each peer. It also periodically sends "announce nodes" messages to other peers to share its own address.
 

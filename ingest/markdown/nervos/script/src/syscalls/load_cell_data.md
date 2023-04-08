@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/syscalls/load_cell_data.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/syscalls/load_cell_data.rs)
 
 The `LoadCellData` module provides a system call implementation for the CKB VM to load cell data. It is used to fetch data from a cell in the current transaction or from a cell in a group transaction. The module is part of the CKB project, which is a public blockchain that uses the Nervos Network to provide a secure, decentralized, and scalable platform for building decentralized applications.
 
@@ -13,7 +13,7 @@ The `load_data` method is used to load cell data. It takes a `SupportMachine` ob
 The `Syscalls` trait implementation provides the `initialize` and `ecall` methods. The `initialize` method does nothing, and the `ecall` method checks the system call number and calls the appropriate method to load cell data.
 
 In summary, the `LoadCellData` module provides a system call implementation to load cell data from the current transaction or from a group transaction. It is used by the CKB VM to execute scripts and smart contracts on the CKB blockchain.
-## Questions: 
+## Questions:
  1. What is the purpose of the `LoadCellData` struct and its methods?
 - The `LoadCellData` struct is a syscalls implementation for loading cell data in CKB VM. Its methods are used to fetch cell data from different sources and load it into the VM's memory.
 

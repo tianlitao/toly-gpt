@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/types/header_map/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/types/header_map/mod.rs)
 
 The `HeaderMap` module is responsible for managing a key-value store of block headers. It provides methods for inserting, removing, and querying headers from the store. The module is used in the larger project to cache block headers and improve synchronization efficiency.
 
@@ -13,7 +13,7 @@ The `HeaderMap` module also provides a constructor method `new` that creates a n
 The `new` method creates a new `HeaderMapKernel` instance with the `SledBackend` backend and the specified `tmpdir` and `memory_limit` parameters. It then creates a new `Arc` to the `HeaderMapKernel` instance and sets it as the `inner` field of the `HeaderMap` struct. It also spawns a background task that limits the memory usage of the key-value store by periodically calling the `limit_memory` method of the `HeaderMapKernel` instance. The background task is stopped when the `stop` method of the `StopHandler` instance is called.
 
 The `HeaderMap` module is used in the larger project to cache block headers and improve synchronization efficiency. By caching block headers in memory, the project can avoid reading headers from disk repeatedly, which can be slow and inefficient. The `HeaderMap` module provides a simple and efficient way to cache block headers and query them by hash.
-## Questions: 
+## Questions:
  1. What is the purpose of the `HeaderMap` struct and how is it used?
 - The `HeaderMap` struct is used to store and manage header data for the CKB blockchain. It provides methods for inserting, getting, and removing header data, as well as checking if a given header hash is contained in the map.
 

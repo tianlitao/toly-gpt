@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/conversion/primitive.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/conversion/primitive.rs)
 
 This code provides implementations for the `Pack` and `Unpack` traits for various types used in the `ckb` project. These traits are used to convert Rust types to and from serialized byte arrays, which are used to store data on disk or transmit data over the network.
 
@@ -9,7 +9,7 @@ For example, the `Pack` implementation for `bool` converts a boolean value to a 
 These implementations are used throughout the `ckb` project to serialize and deserialize data structures. For example, the `packed::Transaction` struct represents a serialized transaction, and its fields are defined using the `Pack` and `Unpack` traits. This allows the transaction to be easily serialized to and from a byte array for storage or transmission.
 
 Overall, this code provides a foundation for serialization and deserialization in the `ckb` project, allowing data to be easily stored and transmitted in a compact and efficient format.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Pack` and `Unpack` traits being implemented for various types?
    - The `Pack` and `Unpack` traits are implemented to allow for serialization and deserialization of various types into packed binary format using the `packed` module.
 2. What is the purpose of the `impl_conversion_for_entity_unpack!` macro being used for certain types?

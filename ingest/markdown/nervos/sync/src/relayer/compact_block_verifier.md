@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/relayer/compact_block_verifier.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/relayer/compact_block_verifier.rs)
 
-The code defines three structs: `CompactBlockVerifier`, `PrefilledVerifier`, and `ShortIdsVerifier`. These structs are used to verify the validity of a `CompactBlock` object, which is a compressed representation of a block in the CKB blockchain. 
+The code defines three structs: `CompactBlockVerifier`, `PrefilledVerifier`, and `ShortIdsVerifier`. These structs are used to verify the validity of a `CompactBlock` object, which is a compressed representation of a block in the CKB blockchain.
 
 The `CompactBlockVerifier` struct has a single method, `verify`, which takes a `CompactBlock` object as input and returns a `Status` object. This method calls the `verify` methods of the `PrefilledVerifier` and `ShortIdsVerifier` structs and returns `Status::ok()` if both verifications pass.
 
@@ -19,7 +19,7 @@ if status.is_ok() {
     // handle error
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `CompactBlockVerifier` struct?
 - The `CompactBlockVerifier` struct is used to verify the validity of a compact block.
 

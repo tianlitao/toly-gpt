@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/syscalls/utils.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/syscalls/utils.rs)
 
 The code provided contains two functions that are used to store data in memory. These functions are part of the ckb project and are designed to be used by the virtual machine (VM) that executes smart contracts on the ckb blockchain.
 
@@ -7,7 +7,7 @@ The first function, `store_data`, takes two arguments: a mutable reference to a 
 The second function, `store_u64`, is a convenience function that takes a `SupportMachine` instance and a `u64` value as arguments. The function converts the `u64` value to a little-endian byte array and calls the `store_data` function to store the byte array in memory.
 
 These functions are used by the ckb VM to store data in memory during the execution of smart contracts. The `store_data` function is used to store arbitrary data, while the `store_u64` function is used to store `u64` values. By providing a convenient way to store `u64` values, the `store_u64` function simplifies the process of storing numeric values in memory. Overall, these functions are an important part of the ckb project and are used extensively by the VM to manage memory during the execution of smart contracts.
-## Questions: 
+## Questions:
  1. What is the purpose of the `store_data` function?
 - The `store_data` function is used to store data in memory at a given address and size, with an optional offset.
 

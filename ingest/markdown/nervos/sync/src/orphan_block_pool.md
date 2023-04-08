@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/orphan_block_pool.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/orphan_block_pool.rs)
 
 The code defines a data structure called `OrphanBlockPool` that is used to store orphaned blocks in a blockchain network. Orphaned blocks are blocks that have a parent block that is not yet available in the network. The purpose of the `OrphanBlockPool` is to keep track of these orphaned blocks until their parent blocks become available.
 
@@ -13,7 +13,7 @@ The `get_block` method retrieves a block from the pool given its hash. It does t
 The `clean_expired_blocks` method removes all blocks from the pool that have an epoch number that is more than `EXPIRED_EPOCH` epochs behind the current epoch number. It does this by iterating over all parent hashes in the `leaders` hash set and checking if the first block in the `blocks` hash map under each parent hash has an epoch number that is more than `EXPIRED_EPOCH` epochs behind the current epoch number. If it does, all blocks in the chain starting from the first block are removed from the pool and their hashes are returned in a vector.
 
 The `OrphanBlockPool` is thread-safe and uses a `RwLock` to ensure that multiple threads can access it concurrently. The `OrphanBlockPool` is used in the larger project to keep track of orphaned blocks in the network and to ensure that they are not lost when their parent blocks become available.
-## Questions: 
+## Questions:
  1. What is the purpose of the `OrphanBlockPool` struct and how is it used?
 - The `OrphanBlockPool` struct is used to store orphaned blocks, which are blocks that have a missing parent block. It has methods to insert, remove, and retrieve blocks, as well as to clean up expired blocks.
 

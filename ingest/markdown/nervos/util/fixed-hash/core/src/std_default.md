@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/fixed-hash/core/src/std_default.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/fixed-hash/core/src/std_default.rs)
 
 This code defines a macro called `impl_std_default_default` that generates implementations of the `Default` trait for four different types: `H160`, `H256`, `H512`, and `H520`. These types are defined in other parts of the `ckb` project and represent fixed-size arrays of bytes with lengths of 20, 32, 64, and 65 bytes, respectively.
 
@@ -31,7 +31,7 @@ impl MyStruct {
 ```
 
 In this example, the `new()` method of `MyStruct` initializes each field with a default value using the `Default::default()` method.
-## Questions: 
+## Questions:
  1. What is the purpose of the `impl_std_default_default` macro?
    - The `impl_std_default_default` macro is used to implement the `Default` trait for types `H160`, `H256`, `H512`, and `H520` with default values of all zeros.
 2. What are the sizes of the `H160`, `H256`, `H512`, and `H520` types?

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/utilities/merkle_tree.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/utilities/merkle_tree.rs)
 
 The code defines a struct `MergeByte32` and implements the `Merge` trait for it. The `Merge` trait is used to define how two items of a certain type can be merged into a single item. In this case, the `Item` type is `Byte32`, which is a packed 32-byte array. The `merge` function defined for `MergeByte32` takes two `Byte32` items, concatenates them, and computes the BLAKE2b hash of the concatenated data. The resulting hash is then packed into a `Byte32` and returned.
 
@@ -7,7 +7,7 @@ The code also defines two type aliases `CBMT` and `MerkleProof` using the `ExCBM
 Finally, the code defines a function `merkle_root` that takes a slice of `Byte32` items and returns the Merkle root of the corresponding Merkle tree. The Merkle tree is built using the `CBMT::build_merkle_root` function, which takes the slice of leaves and constructs the Merkle tree using the `MergeByte32` merge function. The Merkle root is then returned as a `Byte32`.
 
 This code is likely used in the larger project to compute Merkle roots and proofs for various data structures. For example, it could be used to compute the Merkle root of a transaction Merkle tree in a blockchain, or to compute a Merkle proof for a particular transaction in the tree. The `MergeByte32` implementation could also be used in other parts of the project that require merging `Byte32` items.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Merge` trait and how is it used in this code?
    - The `Merge` trait defines a method for merging two items of the same type, and it is used to implement a custom merge function for `Byte32` items in this code.
 2. What is the `CBMT` type and how is it related to the `MerkleProof` type?

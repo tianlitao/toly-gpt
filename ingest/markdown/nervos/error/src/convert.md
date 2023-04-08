@@ -1,12 +1,12 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/error/src/convert.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/error/src/convert.rs)
 
-This code is implementing error conversion for the ckb_occupied_capacity crate. The purpose of this code is to handle errors that may occur when calculating the occupied capacity of a cell in the CKB (Nervos Network) blockchain. 
+This code is implementing error conversion for the ckb_occupied_capacity crate. The purpose of this code is to handle errors that may occur when calculating the occupied capacity of a cell in the CKB (Nervos Network) blockchain.
 
-The `impl_error_conversion_with_kind` macro is used to convert errors from the ckb_occupied_capacity crate into InternalError with the CapacityOverflow kind. This means that if an error occurs due to capacity overflow, it will be converted into an InternalError with the CapacityOverflow kind. 
+The `impl_error_conversion_with_kind` macro is used to convert errors from the ckb_occupied_capacity crate into InternalError with the CapacityOverflow kind. This means that if an error occurs due to capacity overflow, it will be converted into an InternalError with the CapacityOverflow kind.
 
-The `impl_error_conversion_with_adaptor` macro is used to convert errors from the ckb_occupied_capacity crate into the top-level Error type. This allows the error to be propagated up the call stack and handled appropriately by the calling code. 
+The `impl_error_conversion_with_adaptor` macro is used to convert errors from the ckb_occupied_capacity crate into the top-level Error type. This allows the error to be propagated up the call stack and handled appropriately by the calling code.
 
-Overall, this code is an important part of the error handling system for the ckb_occupied_capacity crate. It ensures that errors are properly converted and propagated up the call stack, allowing for more robust and reliable code. 
+Overall, this code is an important part of the error handling system for the ckb_occupied_capacity crate. It ensures that errors are properly converted and propagated up the call stack, allowing for more robust and reliable code.
 
 Example usage:
 
@@ -24,7 +24,7 @@ fn main() {
 ```
 
 In this example, the `calculate_capacity` function from the ckb_occupied_capacity crate is called with some cell data. If an error occurs, it will be converted into an InternalError with the CapacityOverflow kind and then into the top-level Error type. The error is then printed to stderr and the program exits with a non-zero status code. If no error occurs, the cell capacity is printed to stdout.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb_occupied_capacity` crate and how does it relate to this code?
    - The `ckb_occupied_capacity` crate is being used to define an error type in this code, specifically for capacity overflow, and is being converted to an internal error type.
 2. What is the difference between `impl_error_conversion_with_kind` and `impl_error_conversion_with_adaptor` macros?

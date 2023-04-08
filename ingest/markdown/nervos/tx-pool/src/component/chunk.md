@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/tx-pool/src/component/chunk.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/tx-pool/src/component/chunk.rs)
 
 The `ChunkQueue` module is responsible for managing a queue of transactions that are waiting to be included in a block. It is used in the larger `ckb` project to help manage the process of constructing and validating blocks.
 
@@ -19,7 +19,7 @@ The `ChunkQueue` struct provides several methods for managing the queue:
 - `add_tx(tx: TransactionView, remote: Option<(Cycle, PeerIndex)>)` adds a new transaction to the queue. If the transaction is already in the queue, it returns `false`. Otherwise, it adds the transaction to the queue and returns `true`.
 
 Overall, the `ChunkQueue` module provides a simple and efficient way to manage a queue of transactions waiting to be included in a block. It is an important component of the larger `ckb` project, which relies on efficient transaction management to ensure the smooth operation of the blockchain.
-## Questions: 
+## Questions:
  1. What is the purpose of this code and how does it fit into the overall ckb project?
 - This code defines a ChunkQueue struct that is used to store and manage transactions in chunks. It is part of the ckb project's networking module.
 

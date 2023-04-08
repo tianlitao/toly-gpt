@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/extension/std_traits.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/extension/std_traits.rs)
 
 This code defines a set of macros and implementations for comparing and hashing various data structures used in the ckb project. The purpose of this code is to provide a standard way of comparing and hashing these data structures, which is important for various operations such as sorting and indexing.
 
@@ -7,7 +7,7 @@ The `impl_std_cmp_eq_and_hash!` macro is used to generate implementations of the
 The `Ord` and `PartialOrd` traits are also implemented for the `Byte32` data structure. These traits are used for sorting and comparison operations, and are implemented using the `cmp()` method, which compares two byte slices.
 
 Overall, this code provides a standard way of comparing and hashing various data structures used in the ckb project. By using these standard implementations, the project can ensure that these operations are consistent and correct across different parts of the codebase. For example, if two different parts of the codebase need to compare `Byte32` values, they can use the same implementation provided by this code, rather than implementing their own potentially inconsistent implementations.
-## Questions: 
+## Questions:
  1. What is the purpose of the `impl_std_cmp_eq_and_hash!` macro and how is it used in this code?
    - The `impl_std_cmp_eq_and_hash!` macro is used to implement the `PartialEq`, `Eq`, and `Hash` traits for several structs defined in the `packed` module. It is used to reduce code duplication and make the implementation of these traits more concise.
 2. Why are some structs like `Byte32` implementing the `Ord` and `PartialOrd` traits separately from the `impl_std_cmp_eq_and_hash!` macro?

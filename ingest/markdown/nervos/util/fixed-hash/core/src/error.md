@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/fixed-hash/core/src/error.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/fixed-hash/core/src/error.rs)
 
 The code defines two custom error types, `FromStrError` and `FromSliceError`, which are used for error handling during string parsing and byte slice conversion, respectively. These error types are defined using the `thiserror` crate, which allows for easy implementation of custom error types in Rust.
 
@@ -24,7 +24,7 @@ fn parse_input(input: &str) -> Result<(), FromStrError> {
 ```
 
 In this example, the `parse_input` function attempts to parse an input string as an `i32` using the `parse` method provided by the `FromStr` trait. If an error occurs during parsing, such as an invalid character or length, a `FromStrError` will be returned with the specific error information. The caller of the `parse_input` function can then handle the error appropriately, such as by displaying an error message to the user or retrying with a different input.
-## Questions: 
+## Questions:
  1. What is the purpose of the `thiserror` crate used in this code?
    - The `thiserror` crate is used to define custom error types with minimal boilerplate code.
 

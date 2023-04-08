@@ -1,14 +1,14 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/protocols/discovery/addr.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/protocols/discovery/addr.rs)
 
-The code defines several structs and traits related to peer-to-peer networking in the ckb project. 
+The code defines several structs and traits related to peer-to-peer networking in the ckb project.
 
-The `Misbehavior` enum defines different types of misbehavior that a peer can exhibit, such as sending duplicate messages or sending messages with too many items. The `MisbehaveResult` enum defines the result of reporting such misbehavior, which is to disconnect the peer. 
+The `Misbehavior` enum defines different types of misbehavior that a peer can exhibit, such as sending duplicate messages or sending messages with too many items. The `MisbehaveResult` enum defines the result of reporting such misbehavior, which is to disconnect the peer.
 
-The `AddressManager` trait defines methods for managing peer addresses, such as registering and unregistering a peer, checking if an address is valid, and adding new addresses. It also defines a method for reporting misbehavior and getting random addresses. 
+The `AddressManager` trait defines methods for managing peer addresses, such as registering and unregistering a peer, checking if an address is valid, and adding new addresses. It also defines a method for reporting misbehavior and getting random addresses.
 
-The `AddrKnown` struct implements a rolling Bloom filter for keeping track of known addresses. It has methods for inserting and checking if an address is contained in the filter. 
+The `AddrKnown` struct implements a rolling Bloom filter for keeping track of known addresses. It has methods for inserting and checking if an address is contained in the filter.
 
-Overall, these structs and traits provide the necessary functionality for managing peer addresses and detecting and reporting misbehavior. They can be used in the larger project to ensure that peers are behaving correctly and to maintain a list of known addresses. 
+Overall, these structs and traits provide the necessary functionality for managing peer addresses and detecting and reporting misbehavior. They can be used in the larger project to ensure that peers are behaving correctly and to maintain a list of known addresses.
 
 Example usage of the `AddressManager` trait could look like this:
 
@@ -33,7 +33,7 @@ let mut address_manager = MyAddressManager;
 let addr = Multiaddr::from("/ip4/127.0.0.1/tcp/1234");
 address_manager.add_new_addr(session_id, (addr, Flags::default()));
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `Misbehavior` enum and how is it used in the code?
 - The `Misbehavior` enum defines different types of misbehavior that a peer can exhibit, such as sending duplicate messages or too many addresses in one item. It is used in the `AddressManager` trait to handle misbehavior reports.
 

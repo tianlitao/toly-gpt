@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/launcher/src/migrations/add_block_filter_hash.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/launcher/src/migrations/add_block_filter_hash.rs)
 
 The code defines a migration for adding block filter hashes to a RocksDB database used by the ckb project. The migration is implemented as a struct called `AddBlockFilterHash` that implements the `Migration` trait. The `migrate` method of the trait is implemented to perform the actual migration.
 
@@ -19,15 +19,15 @@ let pb = Arc::new(|_| ProgressBar::new(100));
 let migration = AddBlockFilterHash;
 migration.migrate(db, pb).unwrap();
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-   
+
    This code is a migration script that adds block filter hashes to the RocksDB database used by the ckb blockchain node.
 
 2. What dependencies does this code use?
-   
+
    This code uses several dependencies, including `ckb_app_config`, `ckb_db`, `ckb_db_migration`, `ckb_db_schema`, `ckb_error`, `ckb_hash`, `ckb_store`, and `ckb_types`.
 
 3. What is the significance of the `AddBlockFilterHash` struct?
-   
+
    The `AddBlockFilterHash` struct is a migration that adds block filter hashes to the database. It implements the `Migration` trait, which defines the `migrate`, `version`, and `expensive` methods used by the migration framework.

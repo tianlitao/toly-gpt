@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/legacy/tx_pool.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/legacy/tx_pool.rs)
 
 This code defines a configuration struct for the transaction pool of the ckb project. The transaction pool is a data structure that holds unconfirmed transactions that have been broadcast to the network. The purpose of this configuration is to set various parameters for the transaction pool, such as the maximum size of the pool, the minimum fee rate for transactions, and the maximum number of ancestors a transaction can have.
 
@@ -9,7 +9,7 @@ The `DEFAULT_MIN_FEE_RATE` constant sets the default minimum fee rate for transa
 The `default()` function is used to set default values for the `TxPoolConfig` struct. The `From` trait is implemented to convert a `TxPoolConfig` struct into a `crate::TxPoolConfig` struct.
 
 Overall, this code provides a way to configure the transaction pool for the ckb project. By setting the various parameters of the transaction pool, users can optimize the performance of the pool and ensure that it operates efficiently. For example, by setting a higher minimum fee rate, users can ensure that only high-value transactions are included in the pool, while setting a lower maximum number of ancestors can help prevent transaction spam.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code defines a configuration struct for a transaction pool in the ckb project, including parameters such as maximum pool size, fee rate, and expiration time.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/src/strings.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/src/strings.rs)
 
 ## `ckb_util::strings` Module
 
@@ -26,15 +26,15 @@ assert!(check_if_identifier_is_valid("test 123").is_err());
 ```
 
 The first two examples pass valid identifiers to the function and expect it to return `Ok(())`. The third example passes an empty string to the function and expects it to return an error message. The fourth example passes a string that contains a space character to the function and expects it to return an error message.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
-    
+
     This code provides a function to check whether a given string is a valid identifier or not. It considers non-empty strings containing only alphabets, digits, `-`, and `_` as valid identifiers.
 
 2. What is the input and output of the `check_if_identifier_is_valid` function?
-    
+
     The input of the `check_if_identifier_is_valid` function is a string slice `&str` representing the identifier to be checked. The output is a `Result<(), String>` where `Ok(())` is returned if the identifier is valid, and `Err` is returned with an error message if the identifier is invalid.
 
 3. What is the purpose of the regular expression `IDENT_PATTERN`?
-    
+
     The regular expression `IDENT_PATTERN` is used to match the given identifier string against a pattern of valid identifier characters. It matches any string containing only alphabets, digits, `-`, and `_`.

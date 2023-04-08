@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/block_status.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/block_status.rs)
 
 This code defines a set of bitflags for the `BlockStatus` struct. Bitflags are a way of representing a set of boolean flags as a single integer value, where each bit in the integer corresponds to a specific flag. This allows for efficient storage and manipulation of sets of flags.
 
@@ -36,7 +36,7 @@ if block_invalid {
     block_status |= BlockStatus::BLOCK_INVALID;
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `bitflags` crate and how is it used in this code?
    - The `bitflags` crate is used to create bitflags for a struct, allowing for easy manipulation of binary flags. It is used in this code to define the `BlockStatus` struct with various flag constants.
 2. What do the different flag constants in the `BlockStatus` struct represent?

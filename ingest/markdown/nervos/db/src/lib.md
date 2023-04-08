@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/db/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/db/src/lib.rs)
 
-The code is a library for the ckb project that provides a key-value store interface through the `KeyValueDB` trait. The library is composed of several modules, including `db`, `db_with_ttl`, `iter`, `read_only_db`, `snapshot`, `transaction`, and `write_batch`. 
+The code is a library for the ckb project that provides a key-value store interface through the `KeyValueDB` trait. The library is composed of several modules, including `db`, `db_with_ttl`, `iter`, `read_only_db`, `snapshot`, `transaction`, and `write_batch`.
 
 The `db` module contains the implementation of the RocksDB database, which is a high-performance embedded key-value store. The `db_with_ttl` module extends the `db` module by adding support for key-value pairs with a time-to-live (TTL) expiration. The `iter` module provides an iterator interface for the key-value store. The `read_only_db` module provides a read-only view of the key-value store. The `snapshot` module provides a consistent view of the key-value store at a specific point in time. The `transaction` module provides transactional support for the key-value store. The `write_batch` module provides a batch write interface for the key-value store.
 
@@ -21,7 +21,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file contains the `KeyValueDB` traits which provides key-value store interface for the DB Library.
 

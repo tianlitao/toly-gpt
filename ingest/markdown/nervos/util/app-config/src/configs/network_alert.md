@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/app-config/src/configs/network_alert.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/app-config/src/configs/network_alert.rs)
 
 The code defines a struct called `Config` that represents the network alert configuration options. The struct has two fields: `signatures_threshold` and `public_keys`. `signatures_threshold` is an integer that represents the minimum number of required signatures to send a network alert. `public_keys` is a vector of `JsonBytes` that represents the public keys of all the network alert signers.
 
@@ -22,12 +22,12 @@ for public_key in config.public_keys {
     println!("Public key: {}", public_key);
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb_jsonrpc_types` and `serde` crates being used in this file?
    - The `ckb_jsonrpc_types` crate is being used to define the `JsonBytes` type, while the `serde` crate is being used for serialization and deserialization of the `Config` struct.
-   
+
 2. What is the `Config` struct used for and what fields does it contain?
    - The `Config` struct is used to hold network alert configuration options, and it contains two fields: `signatures_threshold` (the minimum number of required signatures to send a network alert) and `public_keys` (the public keys of all the network alert signers).
-   
+
 3. What is the purpose of the `Default` implementation for the `Config` struct?
    - The `Default` implementation for the `Config` struct provides a default alert system configuration by reading from a TOML file located at `./alert_signature.toml`.

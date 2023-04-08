@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/extension/capacity.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/extension/capacity.rs)
 
 The code provided contains implementations of methods for calculating the occupied capacity of different types of cells in the CKB blockchain. The occupied capacity is the amount of space a cell takes up in a block. This is important because the amount of space a cell occupies determines the fee that must be paid to include it in a block.
 
@@ -11,7 +11,7 @@ The second method in `CellOutput` is `is_lack_of_capacity` which returns a boole
 The `CellOutputBuilder` struct has a method `build_exact_capacity` which builds a `CellOutput` and sets its `capacity` field equal to its occupied capacity exactly. The method takes a `data_capacity` parameter which is the capacity of the data in the cell output. The method returns a `CapacityResult` which is a type alias for a `Result` with a `packed::CellOutput` type.
 
 The `CellOutputVec` struct has a method `total_capacity` which sums the capacities of all `CellOutput`s in the vector. The method returns a `CapacityResult` which is a type alias for a `Result` with a `Capacity` type.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb_occupied_capacity` crate and how is it used in this code?
    - The `ckb_occupied_capacity` crate is used to define a `Result` type for capacity calculations. It is used in this code to return the result of capacity calculations as a `CapacityResult` type.
 

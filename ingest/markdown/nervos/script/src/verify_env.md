@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/script/src/verify_env.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/script/src/verify_env.rs)
 
 The code defines a transaction verification environment for the ckb project. The environment is used to determine the phase of a transaction and the earliest block in which it will be committed. The `TxVerifyPhase` enum defines the three possible phases of a transaction: `Submitted`, `Proposed`, and `Committed`. The `TxVerifyEnv` struct defines the environment of a transaction and has methods to create a new environment for each phase of a transaction.
 
@@ -9,7 +9,7 @@ The `TxVerifyEnv` struct has four methods to create a new environment for each p
 The `TxVerifyEnv` struct has three methods to determine the earliest block in which the transaction will be committed. The `block_number` method returns the block number of the earliest block in which the transaction will be committed. The input is the proposal window, which is used to calculate the number of blocks that need to be waited before the transaction can be committed. The `epoch_number` method returns the epoch number of the earliest epoch in which the transaction will be committed. The input is the proposal window, which is used to calculate the number of blocks that need to be waited before the transaction can be committed. The `parent_hash` method returns the parent block hash of the earliest block in which the transaction will be committed. The `epoch` method returns the earliest epoch in which the transaction will be committed. The `epoch_number_without_proposal_window` method returns the epoch number of the earliest epoch in which the transaction will be committed without considering the proposal window.
 
 Overall, this code provides a way to determine the earliest block in which a transaction will be committed based on the current tip header and the phase of the transaction. This information can be used in the larger project to optimize transaction processing and ensure that transactions are committed in a timely manner.
-## Questions: 
+## Questions:
  1. What is the purpose of the `TxVerifyEnv` struct and its associated methods?
 - The `TxVerifyEnv` struct represents the environment that transactions are in, and its methods provide information about when a transaction will be proposed and committed based on the current tip header and the number of blocks that have passed since the transaction was proposed.
 

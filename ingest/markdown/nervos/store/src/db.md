@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/store/src/db.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/store/src/db.rs)
 
 The `ChainDB` module is responsible for managing the storage of blockchain data in the CKB project. It provides an implementation of the `ChainStore` trait, which defines the interface for reading and writing data to the blockchain storage. The `ChainDB` module also provides an implementation of the `VersionbitsIndexer` trait, which is used to index blocks by version bits.
 
@@ -9,7 +9,7 @@ The `ChainDB` struct provides several methods for reading and writing data to th
 The `init` method is used to initialize the blockchain storage with the genesis block and epoch. It creates a new transaction, inserts the genesis block and epoch, and attaches the block to the cell. It also creates a new `ChainRootMMR` instance and adds the genesis block to it.
 
 Overall, the `ChainDB` module provides a high-level interface for managing the storage of blockchain data in the CKB project. It is used extensively throughout the project to read and write data to the blockchain storage.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ChainDB` struct?
 - The `ChainDB` struct is a database wrapper that implements the `ChainStore` trait and provides methods for storing and retrieving data related to the blockchain.
 

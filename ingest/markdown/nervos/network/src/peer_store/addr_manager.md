@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/peer_store/addr_manager.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/peer_store/addr_manager.rs)
 
 The `AddrManager` struct is responsible for managing a list of addresses that can be used to connect to peers in the network. It keeps track of each address's unique ID, the `AddrInfo` struct that contains information about the address, and a list of random IDs that are used to randomly select addresses to connect to.
 
@@ -19,7 +19,7 @@ The `get_mut` method returns a mutable reference to the `AddrInfo` for a given a
 The `swap_random_id` method swaps two random IDs in the `random_ids` list and updates the `random_id_pos` field in the corresponding `AddrInfo` structs to keep them consistent.
 
 Overall, the `AddrManager` struct provides a way to manage a list of addresses that can be used to connect to peers in the network. It allows for adding, removing, and retrieving addresses, as well as selecting random addresses to connect to. It is an important component of the larger project as it helps to maintain a healthy network of peers.
-## Questions: 
+## Questions:
  1. What is the purpose of the `AddrManager` struct and what data does it store?
 - The `AddrManager` struct is used to manage address information and store it in various data structures such as `HashMap` and `Vec`. It stores information such as the next ID, a mapping of socket addresses to IDs, a mapping of IDs to address information, and a vector of random IDs.
 

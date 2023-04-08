@@ -1,8 +1,8 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/jsonrpc-types/src/info.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/jsonrpc-types/src/info.rs)
 
-This file contains several structs and enums that are used to represent information related to softfork deployments and chain information in the ckb project. 
+This file contains several structs and enums that are used to represent information related to softfork deployments and chain information in the ckb project.
 
-The `DeploymentPos` enum represents the possible deployment positions, with two options: `Testdummy` and `LightClient`. 
+The `DeploymentPos` enum represents the possible deployment positions, with two options: `Testdummy` and `LightClient`.
 
 The `DeploymentState` enum represents the possible states of a softfork deployment, with five options: `Defined`, `Started`, `LockedIn`, `Active`, and `Failed`. Each state represents a different stage in the softfork deployment process, from the initial definition to the final outcome.
 
@@ -12,10 +12,10 @@ The `DeploymentInfo` struct contains information about a specific softfork deplo
 
 The `ChainInfo` struct contains information about the chain, including the network name, median time of the last 37 blocks, epoch information of the tip block, current difficulty, whether the local node is in IBD, and active alerts stored in the local node.
 
-These structs and enums are used throughout the ckb project to represent and manipulate softfork deployment and chain information. For example, the `DeploymentsInfo` struct may be used to retrieve information about softfork deployments at a specific block, while the `ChainInfo` struct may be used to retrieve information about the current state of the chain. 
+These structs and enums are used throughout the ckb project to represent and manipulate softfork deployment and chain information. For example, the `DeploymentsInfo` struct may be used to retrieve information about softfork deployments at a specific block, while the `ChainInfo` struct may be used to retrieve information about the current state of the chain.
 
 Overall, this file provides a foundation for working with softfork deployments and chain information in the ckb project.
-## Questions: 
+## Questions:
  1. What is the purpose of the `DeploymentPos` enum and what are its possible values?
 - The `DeploymentPos` enum is used to represent the name of a softfork deployment.
 - Its possible values are `Testdummy` and `LightClient`.

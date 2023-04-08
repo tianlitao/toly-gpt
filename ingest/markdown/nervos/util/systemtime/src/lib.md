@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/systemtime/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/systemtime/src/lib.rs)
 
 The `ckb_systemtime` module provides a way to get the current system timestamp, either the real system timestamp or a fake timestamp when the `enable_faketime` feature is enabled. The module contains several functions and a struct.
 
@@ -22,7 +22,7 @@ fn test_faketime() {
     assert_eq!(ckb_systemtime::unix_time_as_millis(), 1000);
 }
 ```
-## Questions: 
+## Questions:
  1. What is the purpose of the `enable_faketime` feature and how does it work?
    - The `enable_faketime` feature provides fake timestamps when enabled. It works by storing a fake timestamp in the `FAKETIME` variable and checking if `FAKETIME_ENABLED` is set to true before returning the fake timestamp.
 2. What is the difference between `unix_time_as_millis` and `system_time_as_millis` functions?

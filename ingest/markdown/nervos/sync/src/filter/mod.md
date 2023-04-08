@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/filter/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/filter/mod.rs)
 
 The `BlockFilter` module is a protocol handler for the CKB (Nervos Network) blockchain. It is responsible for handling messages related to block filters, which are used to allow light clients to verify the inclusion of transactions in blocks without downloading the entire blockchain.
 
@@ -15,7 +15,7 @@ The `BlockFilter` struct implements the `CKBProtocolHandler` trait's `received` 
 The `BlockFilter` struct also implements the `CKBProtocolHandler` trait's `connected` and `disconnected` methods, which are called when a peer connects or disconnects from the node.
 
 Overall, the `BlockFilter` module is an important part of the CKB blockchain's synchronization process, allowing light clients to verify the inclusion of transactions in blocks without downloading the entire blockchain.
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file contains the implementation of the BlockFilter protocol handler, which handles messages related to block filters.
 

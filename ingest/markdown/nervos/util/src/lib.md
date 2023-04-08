@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/src/lib.rs)
 
 The `ckb` project is a collection of utilities that are frequently used in Rust programming. This particular file is a module that contains a set of utility functions that are used throughout the project. The purpose of this module is to provide a centralized location for these functions, making it easier for developers to find and use them.
 
@@ -13,7 +13,7 @@ The `strings` module provides utility functions for working with strings, such a
 The module also exports several types from the `parking_lot` crate, which provides synchronization primitives that are more efficient than those provided by the standard library. These types include `Mutex`, `RwLock`, and `Condvar`, which can be used to synchronize access to shared data.
 
 Overall, this module provides a set of utility functions that are used throughout the `ckb` project. By centralizing these functions in one location, the module makes it easier for developers to find and use them, improving the overall maintainability of the project.
-## Questions: 
+## Questions:
  1. What is the purpose of the `ckb` project and how does this file fit into it?
 - The `ckb` project is not described in this file, so a smart developer might want to know more about the overall project and how this file fits into it.
 

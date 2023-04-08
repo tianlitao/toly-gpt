@@ -1,10 +1,10 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/jsonrpc-types/src/primitive.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/jsonrpc-types/src/primitive.rs)
 
-This code defines several type aliases for unsigned integer types used in the ckb project. These types are used to represent various values such as block numbers, epoch numbers, capacity, cycle counts, timestamps, and versions. 
+This code defines several type aliases for unsigned integer types used in the ckb project. These types are used to represent various values such as block numbers, epoch numbers, capacity, cycle counts, timestamps, and versions.
 
 The `EpochNumberWithFraction` type is a 64-bit unsigned integer that encodes information about the epoch of a block. The lower 56 bits of the epoch field are split into three parts: the highest 16 bits represent the epoch length, the next 16 bits represent the current block index in the epoch, and the lowest 24 bits represent the current epoch number. The `AsEpochNumberWithFraction` trait is defined to allow conversion of `EpochNumberWithFraction` values to epoch number, epoch index, and epoch length values.
 
-This code is important for the ckb project because it defines the types used to represent various values in the system. These types are used throughout the project to ensure consistency and correctness of values. For example, the `BlockNumber` type is used to represent block numbers in the system, and the `Capacity` type is used to represent the capacity of a cell in Shannons. 
+This code is important for the ckb project because it defines the types used to represent various values in the system. These types are used throughout the project to ensure consistency and correctness of values. For example, the `BlockNumber` type is used to represent block numbers in the system, and the `Capacity` type is used to represent the capacity of a cell in Shannons.
 
 Here is an example of how these types might be used in the larger project:
 
@@ -17,7 +17,7 @@ fn process_block(block_number: BlockNumber, capacity: Capacity) {
 ```
 
 In this example, the `process_block` function takes a `BlockNumber` and `Capacity` value as arguments and uses them to process a block in the system. By using these types, the function can ensure that the values are of the correct type and within the correct range of values.
-## Questions: 
+## Questions:
  1. What are the different types defined in this file and what do they represent?
 - The file defines several type aliases, including `BlockNumber`, `EpochNumber`, `EpochNumberWithFraction`, `Capacity`, `Cycle`, `Timestamp`, and `Version`. Each type represents a specific kind of numeric value used in the CKB blockchain.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/util/types/src/core/service.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/util/types/src/core/service.rs)
 
 This file contains types and functions related to CKB services, which act as actors that process requests from a channel and send back responses via a one-shot channel. The purpose of this code is to provide a framework for building CKB services that can communicate with other parts of the CKB system.
 
@@ -9,7 +9,7 @@ The `Request<A, R>` struct has a method `call` that can be used to call the serv
 Finally, the file defines a struct `PoolTransactionEntry` that represents a transaction in the transaction pool. This struct contains information about the transaction, including the transaction view, consumed cycles, serialized size, fee, and timestamp.
 
 Overall, this code provides a useful framework for building CKB services that can communicate with other parts of the CKB system. The `Request<A, R>` struct and its `call` method make it easy to send synchronous requests to services, while the `PoolTransactionEntry` struct provides a convenient way to represent transactions in the transaction pool.
-## Questions: 
+## Questions:
  1. What is the purpose of this code file?
 - This code file contains types for CKB services, which are actors that process requests from a channel and send back the response via one shot channel.
 

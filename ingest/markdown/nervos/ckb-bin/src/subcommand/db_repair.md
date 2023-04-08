@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/ckb-bin/src/subcommand/db_repair.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/ckb-bin/src/subcommand/db_repair.rs)
 
 The `db_repair` function is a part of the `ckb` project and is responsible for repairing a corrupted RocksDB database. The function takes in a `RepairArgs` struct as an argument, which contains the path to the corrupted database. The function returns a `Result` with an empty tuple `()` on success or an `ExitCode` on failure.
 
@@ -25,7 +25,7 @@ fn main() {
 ```
 
 In this example, we create a new `RepairArgs` struct with default configuration and pass it to the `db_repair` function. If the repair is successful, the program prints a success message to the console. If the repair fails, the program prints an error message with the exit code.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code defines a function called `db_repair` that repairs a RocksDB database specified in the `RepairArgs` argument.
 

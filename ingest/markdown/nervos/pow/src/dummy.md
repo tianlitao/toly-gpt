@@ -1,10 +1,10 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/pow/src/dummy.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/pow/src/dummy.rs)
 
-The code above defines a struct called `DummyPowEngine` that implements the `PowEngine` trait. The `PowEngine` trait is used in the CKB (Nervos Common Knowledge Base) blockchain project to verify the proof-of-work (PoW) consensus algorithm. 
+The code above defines a struct called `DummyPowEngine` that implements the `PowEngine` trait. The `PowEngine` trait is used in the CKB (Nervos Common Knowledge Base) blockchain project to verify the proof-of-work (PoW) consensus algorithm.
 
-The `DummyPowEngine` struct is a placeholder implementation of the `PowEngine` trait that always returns `true` when the `verify` method is called. This means that any header passed to the `verify` method will be considered valid by the `DummyPowEngine`. 
+The `DummyPowEngine` struct is a placeholder implementation of the `PowEngine` trait that always returns `true` when the `verify` method is called. This means that any header passed to the `verify` method will be considered valid by the `DummyPowEngine`.
 
-This code is likely used in the CKB project as a temporary implementation of the `PowEngine` trait during development or testing. It allows developers to test other parts of the system that depend on the `PowEngine` trait without having to fully implement a working PoW algorithm. 
+This code is likely used in the CKB project as a temporary implementation of the `PowEngine` trait during development or testing. It allows developers to test other parts of the system that depend on the `PowEngine` trait without having to fully implement a working PoW algorithm.
 
 Here is an example of how this code might be used in the larger CKB project:
 
@@ -18,10 +18,10 @@ let is_valid = dummy_engine.verify(&header);
 assert_eq!(is_valid, true);
 ```
 
-In this example, we create a new instance of the `DummyPowEngine` and a new `Header` object. We then call the `verify` method on the `DummyPowEngine` instance, passing in the `Header` object. Since the `DummyPowEngine` always returns `true`, the `is_valid` variable will be set to `true`. We then use an assertion to confirm that `is_valid` is indeed `true`. 
+In this example, we create a new instance of the `DummyPowEngine` and a new `Header` object. We then call the `verify` method on the `DummyPowEngine` instance, passing in the `Header` object. Since the `DummyPowEngine` always returns `true`, the `is_valid` variable will be set to `true`. We then use an assertion to confirm that `is_valid` is indeed `true`.
 
 Overall, this code provides a simple implementation of the `PowEngine` trait that can be used for testing or development purposes in the CKB project.
-## Questions: 
+## Questions:
  1. What is the purpose of the `PowEngine` trait and how is it used in this code?
    - The `PowEngine` trait is likely used to define a proof-of-work algorithm for the `ckb` project. In this code, the `DummyPowEngine` struct implements the `PowEngine` trait with a simple `verify` function that always returns `true`.
 2. Who is `@quake` and what is their role in this code?

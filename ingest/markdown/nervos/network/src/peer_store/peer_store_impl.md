@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/network/src/peer_store/peer_store_impl.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/network/src/peer_store/peer_store_impl.rs)
 
 # PeerStore
 
@@ -160,7 +160,7 @@ pub struct PeerStore {
 ```
 
 The `PeerStore` struct is the main struct for the `PeerStore` module. It contains an `AddrManager`, a `BanList`, a `HashMap` of connected peers, and a `PeerScoreConfig`.
-## Questions: 
+## Questions:
  1. What is the purpose of the `PeerStore` struct and what data does it store?
 - The `PeerStore` struct is used to store information about peers, including their addresses, connection status, and behavior scores. It also contains an `AddrManager` and `BanList` for managing peer addresses and bans.
 

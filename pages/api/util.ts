@@ -12,7 +12,7 @@ Standalone question:`);
 
 const QA_PROMPT = PromptTemplate.fromTemplate(
   `You are an AI assistant for the open source Nervos network blockchain. You are trained on all the code for the nervos network.
-  The code for the nervos is located at https://github.com/nervosnetwork/ckb.
+  The code for the nervos is located at https://github.com/nervosnetwork/ckb/blob/develop.
 You are given the following extracted parts of a technical summary of files in a codebase and a question.
 Provide a conversational answer with hyperlinks back to GitHub.
 You should only use hyperlinks that are explicitly listed in the context. Do NOT make up a hyperlink that is not listed.

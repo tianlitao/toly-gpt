@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/miner/src/worker/mod.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/miner/src/worker/mod.rs)
 
 The code defines a worker controller and worker messages for the CKB (Nervos Network) project. The worker controller is responsible for managing the worker threads, and the worker messages are used to communicate between the worker threads and the controller.
 
@@ -15,7 +15,7 @@ The `partition_nonce` function takes an ID and a total number of workers, and re
 The `dummy` and `eaglesong_simple` modules contain implementations of the `Worker` trait for the dummy and EaglesongSimple workers, respectively. The `Dummy` worker generates random nonces, while the `EaglesongSimple` worker generates nonces using the Eaglesong hash function.
 
 Overall, this code provides a framework for managing worker threads that generate nonces for proof-of-work algorithms. It allows for different types of workers to be used with different proof-of-work algorithms, and provides progress bars for monitoring the progress of the workers.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Worker` trait defined at the end of the code?
 - The `Worker` trait defines a method `run` that takes a nonce generator and a progress bar, and is implemented by types that represent mining workers.
 

@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/sync/src/synchronizer/headers_process.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/sync/src/synchronizer/headers_process.rs)
 
-The `HeadersProcess` struct and its associated methods are part of the ckb project, which is a cryptocurrency implementation based on the Nervos CKB blockchain. The purpose of this code is to process incoming headers from peers and validate them before adding them to the blockchain. 
+The `HeadersProcess` struct and its associated methods are part of the ckb project, which is a cryptocurrency implementation based on the Nervos CKB blockchain. The purpose of this code is to process incoming headers from peers and validate them before adding them to the blockchain.
 
 The `HeadersProcess` struct takes in a `packed::SendHeadersReader` message, a `Synchronizer`, a `PeerIndex`, and a `CKBProtocolContext`. It also has an `ActiveChain` struct that is used to keep track of the current state of the blockchain. The `HeadersProcess` struct has several methods that are used to validate the incoming headers and add them to the blockchain if they are valid.
 
@@ -13,7 +13,7 @@ The `execute` method is the main method of the `HeadersProcess` struct. It first
 The `HeaderAcceptor` struct is used to validate individual headers. It takes in a `core::HeaderView`, a `PeerIndex`, a `HeaderVerifier`, and an `ActiveChain`. The `accept` method of the `HeaderAcceptor` struct validates the header by checking if it has a valid parent, if it is non-contextually valid, and if it has a valid version. If the header is valid, it is added to the blockchain.
 
 The `ValidationResult` struct is used to keep track of the validation state of a header. It has an `error` field that contains an error message if the header is invalid and a `state` field that indicates whether the header is valid, temporarily invalid, or invalid.
-## Questions: 
+## Questions:
  1. What is the purpose of the `HeadersProcess` struct and its associated methods?
 - The `HeadersProcess` struct is responsible for processing incoming header messages from peers during synchronization. Its methods handle tasks such as verifying header validity, checking for continuity, and updating the active chain.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/spec/src/hardfork.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/spec/src/hardfork.rs)
 
 The `HardForkConfig` module is responsible for defining the hard fork parameters for the CKB (Nervos Common Knowledge Base) blockchain. Hard forks are a mechanism used to introduce new features or changes to the blockchain protocol. The `HardForkConfig` module defines the parameters for each hard fork, which are then used to create a `HardForkSwitch` object that can be used to enable or disable specific features at specific epochs.
 
@@ -11,7 +11,7 @@ The `complete_with_default` method creates a `HardForkSwitch` object with defaul
 The `update_builder_via_edition` method is used internally to update a `HardForkSwitchBuilder` object with the defined hard fork parameters. This method is called by the `complete_mainnet` and `complete_testnet` methods.
 
 Overall, the `HardForkConfig` module is an important part of the CKB blockchain, as it defines the hard fork parameters that are used to enable or disable specific features at specific epochs. By defining these parameters, the module allows for the introduction of new features and changes to the blockchain protocol in a controlled and predictable manner.
-## Questions: 
+## Questions:
  1. What is the purpose of this code?
    - This code defines a struct `HardForkConfig` that contains parameters for various hard forks in the CKB blockchain, and provides methods to complete the hard fork switch for mainnet, testnet, or a user-provided epoch.
 

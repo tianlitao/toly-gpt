@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/traits/src/cell_data_provider.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/traits/src/cell_data_provider.rs)
 
 The code defines a trait called `CellDataProvider` that provides methods for loading and fetching cell data and cell data hashes. This trait is used for cell data storage in the larger ckb project.
 
@@ -11,7 +11,7 @@ The `get_cell_data` method fetches cell data from storage. It takes an `OutPoint
 The `get_cell_data_hash` method fetches the cell data hash from storage. It takes an `OutPoint` object as an argument and returns an `Option<Byte32>` object. This method is designed to facilitate caching, as loading a large amount of cell data and calculating the hash may be a performance bottleneck. In unit tests or other scenarios that are not performance bottlenecks, the results of `get_cell_data` can be used to calculate the hash as a default implementation.
 
 Overall, this code provides a flexible and efficient way to store and fetch cell data and cell data hashes in the ckb project. It allows for memory caching and facilitates performance optimization.
-## Questions: 
+## Questions:
  1. What is the purpose of the `CellDataProvider` trait?
    - The `CellDataProvider` trait is used for cell_data storage.
 2. What does the `load_cell_data` function do?

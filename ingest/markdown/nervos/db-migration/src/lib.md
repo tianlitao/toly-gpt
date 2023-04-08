@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/nervosnetwork/ckb/db-migration/src/lib.rs)
+[View code on GitHub](https://github.com/nervosnetwork/ckb/blob/develop/db-migration/src/lib.rs)
 
 The `migrations` module in the `ckb` project provides a way to manage database schema migrations. The `Migrations` struct is the main entry point for managing migrations. It contains a collection of `Migration` objects, which are responsible for performing the actual database schema changes.
 
@@ -9,7 +9,7 @@ The `Migration` trait defines the interface for performing schema migrations. It
 The `DefaultMigration` struct is a simple implementation of the `Migration` trait. It does not perform any schema changes and is not expensive. It is used as a placeholder when no other migrations are defined.
 
 Overall, the `migrations` module provides a flexible and extensible way to manage database schema migrations in the `ckb` project. Developers can define their own migrations by implementing the `Migration` trait and adding them to the `Migrations` struct. The `Migrations` struct provides a simple and consistent interface for managing migrations, making it easy to keep the database schema up-to-date with the latest version of the executable binary.
-## Questions: 
+## Questions:
  1. What is the purpose of the `Migrations` struct and its methods?
 - The `Migrations` struct is responsible for managing database migrations. Its methods include adding a migration, checking if the database version matches the executable binary version, and running migrations.
 
