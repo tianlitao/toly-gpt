@@ -22,7 +22,7 @@ export default function Home() {
     messages: [{
       "message":
       `Hi there! I'm CKBGPT — a chatbot powered by ChatGPT. I can read an entire codebase and generate documentation.
-      I'm currently trained on the [The Common Knowledge Base](https://github.com/nervosnetwork/ckb/blob/develop).
+      I'm currently trained on the [The Common Knowledge Base](https://github.com/nervosnetwork/ckb).
       Ask me anything about how the common knowledge base works and I'll try my best try to answer.
       \n**Current model:** GPT-3.5.`,
       "type": "apiMessage"
